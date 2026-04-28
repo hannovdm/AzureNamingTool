@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "namingtool": {
+      "type": "http",
+      "url": "https://apim-namingtool-we.azure-api.net/naming-tool-mcp/mcp",
+      "headers": {
+        "Ocp-Apim-Subscription-Key": "fc46f175b2824fa1bdd64c6d7e5fea08"
+      }
+    }
+  }
+}
