@@ -1,0 +1,5541 @@
+{
+  "openapi": "3.0.4",
+  "info": {
+    "title": "Azure Naming Tool API v2",
+    "description": "An ASP.NET Core Web API for managing the Azure Naming tool configuration. All API requests require the configured API Keys (found in the site Admin configuration).",
+    "version": "v2.0"
+  },
+  "paths": {
+    "/api/v2/Admin/UpdatePassword": {
+      "post": {
+        "tags": [
+          "Admin"
+        ],
+        "summary": "Update the Global Admin Password.",
+        "parameters": [
+          {
+            "name": "AdminPassword",
+            "in": "header",
+            "description": "string - Current Global Admin Password",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "APIKey",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "string - New Global Admin Password",
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "string"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "type": "string"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StringApiResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObjectApiResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObjectApiResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObjectApiResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v2/Admin/UpdateAPIKey": {
+      "post": {
+        "tags": [
+          "Admin"
+        ],
+        "summary": "Update the Full Access API Key.",
+        "parameters": [
+          {
+            "name": "AdminPassword",
+            "in": "header",
+            "description": "string - Current Global Admin Password",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "APIKey",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "string - New Full Access API Key",
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "string"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "type": "string"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StringApiResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObjectApiResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObjectApiResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObjectApiResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v2/Admin/GenerateAPIKey": {
+      "post": {
+        "tags": [
+          "Admin"
+        ],
+        "summary": "Generate a new Full Access API Key.",
+        "parameters": [
+          {
+            "name": "AdminPassword",
+            "in": "header",
+            "description": "string - Current Global Admin Password",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "APIKey",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StringApiResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObjectApiResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObjectApiResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObjectApiResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v2/Admin/ClearGeneratedNames": {
+      "post": {
+        "tags": [
+          "Admin"
+        ],
+        "summary": "Clear all generated names from the cache.",
+        "parameters": [
+          {
+            "name": "AdminPassword",
+            "in": "header",
+            "description": "string - Current Global Admin Password",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "APIKey",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StringApiResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObjectApiResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObjectApiResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObjectApiResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v2/CustomComponents": {
+      "get": {
+        "tags": [
+          "CustomComponents"
+        ],
+        "summary": "Gets all custom components.",
+        "parameters": [
+          {
+            "name": "APIKey",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CustomComponentListApiResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObjectApiResponse"
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "CustomComponents"
+        ],
+        "summary": "Updates a customcomponent.",
+        "parameters": [
+          {
+            "name": "APIKey",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CustomComponent"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CustomComponent"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CustomComponent"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CustomComponentApiResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObjectApiResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObjectApiResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v2/CustomComponents/{id}": {
+      "get": {
+        "tags": [
+          "CustomComponents"
+        ],
+        "summary": "Gets a specific customcomponent by ID.",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "APIKey",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CustomComponentApiResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObjectApiResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObjectApiResponse"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "CustomComponents"
+        ],
+        "summary": "Deletes a customcomponent.",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "APIKey",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObjectApiResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObjectApiResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObjectApiResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v2/CustomComponents/PostConfig": {
+      "post": {
+        "tags": [
+          "CustomComponents"
+        ],
+        "summary": "Updates all custom components.",
+        "parameters": [
+          {
+            "name": "APIKey",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/CustomComponent"
+                }
+              }
+            },
+            "text/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/CustomComponent"
+                }
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/CustomComponent"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CustomComponentListApiResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObjectApiResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObjectApiResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v2/ImportExport/ExportConfiguration": {
+      "get": {
+        "tags": [
+          "ImportExport"
+        ],
+        "summary": "Exports the current configuration data (all components) as a single JSON file.",
+        "parameters": [
+          {
+            "name": "includeAdmin",
+            "in": "query",
+            "description": "Flag indicating whether to include admin data in the export",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          },
+          {
+            "name": "APIKey",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ConfigurationDataApiResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObjectApiResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObjectApiResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v2/ImportExport/ImportConfiguration": {
+      "post": {
+        "tags": [
+          "ImportExport"
+        ],
+        "summary": "Imports the provided configuration data (all components). This will overwrite the existing configuration data.",
+        "parameters": [
+          {
+            "name": "APIKey",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "Tool configuration file in JSON format",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ConfigurationData"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ConfigurationData"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ConfigurationData"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObjectApiResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObjectApiResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObjectApiResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v2/Policy/GetPolicyDefinition": {
+      "get": {
+        "tags": [
+          "Policy"
+        ],
+        "summary": "Gets the Azure Policy definition for resource naming validation.",
+        "parameters": [
+          {
+            "name": "APIKey",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "501": {
+            "description": "Feature not yet implemented",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObjectApiResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v2/ResourceComponents": {
+      "get": {
+        "tags": [
+          "ResourceComponents"
+        ],
+        "summary": "Gets all resource components.",
+        "parameters": [
+          {
+            "name": "admin",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          },
+          {
+            "name": "APIKey",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResourceComponentListApiResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObjectApiResponse"
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "ResourceComponents"
+        ],
+        "summary": "Updates a resourcecomponent.",
+        "parameters": [
+          {
+            "name": "APIKey",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ResourceComponent"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ResourceComponent"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ResourceComponent"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResourceComponentApiResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObjectApiResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObjectApiResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v2/ResourceComponents/{id}": {
+      "get": {
+        "tags": [
+          "ResourceComponents"
+        ],
+        "summary": "Gets a specific resourcecomponent by ID.",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "APIKey",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResourceComponentApiResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObjectApiResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObjectApiResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v2/ResourceComponents/PostConfig": {
+      "post": {
+        "tags": [
+          "ResourceComponents"
+        ],
+        "summary": "Updates all resource components.",
+        "parameters": [
+          {
+            "name": "APIKey",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/ResourceComponent"
+                }
+              }
+            },
+            "text/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/ResourceComponent"
+                }
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/ResourceComponent"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResourceComponentListApiResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObjectApiResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObjectApiResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v2/ResourceDelimiters": {
+      "get": {
+        "tags": [
+          "ResourceDelimiters"
+        ],
+        "summary": "Gets all resource delimiters.",
+        "parameters": [
+          {
+            "name": "admin",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          },
+          {
+            "name": "APIKey",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResourceDelimiterListApiResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObjectApiResponse"
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "ResourceDelimiters"
+        ],
+        "summary": "Updates a resourcedelimiter.",
+        "parameters": [
+          {
+            "name": "APIKey",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ResourceDelimiter"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ResourceDelimiter"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ResourceDelimiter"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResourceDelimiterApiResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObjectApiResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObjectApiResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v2/ResourceDelimiters/{id}": {
+      "get": {
+        "tags": [
+          "ResourceDelimiters"
+        ],
+        "summary": "Gets a specific resourcedelimiter by ID.",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "APIKey",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResourceDelimiterApiResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObjectApiResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObjectApiResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v2/ResourceDelimiters/PostConfig": {
+      "post": {
+        "tags": [
+          "ResourceDelimiters"
+        ],
+        "summary": "Updates all resource delimiters.",
+        "parameters": [
+          {
+            "name": "APIKey",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/ResourceDelimiter"
+                }
+              }
+            },
+            "text/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/ResourceDelimiter"
+                }
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/ResourceDelimiter"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResourceDelimiterListApiResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObjectApiResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObjectApiResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v2/ResourceEnvironments": {
+      "get": {
+        "tags": [
+          "ResourceEnvironments"
+        ],
+        "summary": "Gets all resource environments.",
+        "parameters": [
+          {
+            "name": "APIKey",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResourceEnvironmentListApiResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObjectApiResponse"
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "ResourceEnvironments"
+        ],
+        "summary": "Updates a resourceenvironment.",
+        "parameters": [
+          {
+            "name": "APIKey",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ResourceEnvironment"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ResourceEnvironment"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ResourceEnvironment"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResourceEnvironmentApiResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObjectApiResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObjectApiResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v2/ResourceEnvironments/{id}": {
+      "get": {
+        "tags": [
+          "ResourceEnvironments"
+        ],
+        "summary": "Gets a specific resourceenvironment by ID.",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "APIKey",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResourceEnvironmentApiResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObjectApiResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObjectApiResponse"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "ResourceEnvironments"
+        ],
+        "summary": "Deletes a resourceenvironment.",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "APIKey",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObjectApiResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObjectApiResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObjectApiResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v2/ResourceEnvironments/PostConfig": {
+      "post": {
+        "tags": [
+          "ResourceEnvironments"
+        ],
+        "summary": "Updates all resource environments.",
+        "parameters": [
+          {
+            "name": "APIKey",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/ResourceEnvironment"
+                }
+              }
+            },
+            "text/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/ResourceEnvironment"
+                }
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/ResourceEnvironment"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResourceEnvironmentListApiResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObjectApiResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObjectApiResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v2/ResourceFunctions": {
+      "get": {
+        "tags": [
+          "ResourceFunctions"
+        ],
+        "summary": "Gets all resource functions.",
+        "parameters": [
+          {
+            "name": "APIKey",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResourceFunctionListApiResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObjectApiResponse"
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "ResourceFunctions"
+        ],
+        "summary": "Updates a resourcefunction.",
+        "parameters": [
+          {
+            "name": "APIKey",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ResourceFunction"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ResourceFunction"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ResourceFunction"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResourceFunctionApiResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObjectApiResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObjectApiResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v2/ResourceFunctions/{id}": {
+      "get": {
+        "tags": [
+          "ResourceFunctions"
+        ],
+        "summary": "Gets a specific resourcefunction by ID.",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "APIKey",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResourceFunctionApiResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObjectApiResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObjectApiResponse"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "ResourceFunctions"
+        ],
+        "summary": "Deletes a resourcefunction.",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "APIKey",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObjectApiResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObjectApiResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObjectApiResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v2/ResourceFunctions/PostConfig": {
+      "post": {
+        "tags": [
+          "ResourceFunctions"
+        ],
+        "summary": "Updates all resource functions.",
+        "parameters": [
+          {
+            "name": "APIKey",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/ResourceFunction"
+                }
+              }
+            },
+            "text/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/ResourceFunction"
+                }
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/ResourceFunction"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResourceFunctionListApiResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObjectApiResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObjectApiResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v2/ResourceLocations": {
+      "get": {
+        "tags": [
+          "ResourceLocations"
+        ],
+        "summary": "Gets all resource locations.",
+        "parameters": [
+          {
+            "name": "APIKey",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResourceLocationListApiResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObjectApiResponse"
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "ResourceLocations"
+        ],
+        "summary": "Updates a resourcelocation.",
+        "parameters": [
+          {
+            "name": "APIKey",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ResourceLocation"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ResourceLocation"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ResourceLocation"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResourceLocationApiResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObjectApiResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObjectApiResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v2/ResourceLocations/{id}": {
+      "get": {
+        "tags": [
+          "ResourceLocations"
+        ],
+        "summary": "Gets a specific resourcelocation by ID.",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "APIKey",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResourceLocationApiResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObjectApiResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObjectApiResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v2/ResourceLocations/PostConfig": {
+      "post": {
+        "tags": [
+          "ResourceLocations"
+        ],
+        "summary": "Updates all resource locations.",
+        "parameters": [
+          {
+            "name": "APIKey",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/ResourceLocation"
+                }
+              }
+            },
+            "text/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/ResourceLocation"
+                }
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/ResourceLocation"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResourceLocationListApiResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObjectApiResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObjectApiResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v2/ResourceNamingRequests/RequestNameWithComponents": {
+      "post": {
+        "tags": [
+          "ResourceNamingRequests"
+        ],
+        "summary": "Generate a resource type name with full component definition.\nThis function requires complete definition for all components.\nIt is recommended to use the RequestName API function for simplified name generation.",
+        "parameters": [
+          {
+            "name": "APIKey",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "ResourceNameRequestWithComponents (json) - Complete resource name request data with all components",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ResourceNameRequestWithComponents"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ResourceNameRequestWithComponents"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ResourceNameRequestWithComponents"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResourceNameResponseApiResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObjectApiResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObjectApiResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObjectApiResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v2/ResourceNamingRequests/RequestName": {
+      "post": {
+        "tags": [
+          "ResourceNamingRequests"
+        ],
+        "summary": "Generate a resource type name using simplified data format.\nThis is the recommended method for name generation as it uses a simpler request structure.",
+        "parameters": [
+          {
+            "name": "APIKey",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "ResourceNameRequest (json) - Simplified resource name request data",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ResourceNameRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ResourceNameRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ResourceNameRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResourceNameResponseApiResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObjectApiResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObjectApiResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObjectApiResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v2/ResourceNamingRequests/ValidateName": {
+      "post": {
+        "tags": [
+          "ResourceNamingRequests"
+        ],
+        "summary": "Validate a resource name against the regex pattern for the specified resource type.\nNOTE: This function validates using the resource type regex only, not the full tool configuration.\nUse the RequestName function to validate against the complete tool configuration.",
+        "parameters": [
+          {
+            "name": "APIKey",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "ValidateNameRequest (json) - Name validation request data",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ValidateNameRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ValidateNameRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ValidateNameRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ValidateNameResponseApiResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObjectApiResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObjectApiResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObjectApiResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v2/ResourceNamingRequests/GenerateBulk": {
+      "post": {
+        "tags": [
+          "ResourceNamingRequests"
+        ],
+        "summary": "Generate resource names for multiple resource types in a single request.\nProcesses each resource type independently and returns detailed success/failure information.",
+        "description": "This endpoint allows you to generate names for multiple resource types in a single API call.\n\n**Key Features:**\n- Process multiple resource types with shared component values\n- Continue processing on errors (default: true)\n- Per-resource-type component overrides\n- Validate-only mode (test names without persisting)\n- Detailed success/failure reporting for each resource\n\n**Response Status Codes:**\n- 200 OK: All resource names generated successfully\n- 207 Multi-Status: Partial success (some succeeded, some failed)\n- 400 Bad Request: Validation error or all failed\n",
+        "parameters": [
+          {
+            "name": "APIKey",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "BulkResourceNameRequest (json) - Bulk name generation request with shared components and resource types",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BulkResourceNameRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BulkResourceNameRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/BulkResourceNameRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BulkResourceNameResponseApiResponse"
+                }
+              }
+            }
+          },
+          "207": {
+            "description": "Multi-Status",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BulkResourceNameResponseApiResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObjectApiResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObjectApiResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObjectApiResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v2/ResourceOrgs": {
+      "get": {
+        "tags": [
+          "ResourceOrgs"
+        ],
+        "summary": "Gets all resource orgs.",
+        "parameters": [
+          {
+            "name": "APIKey",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResourceOrgListApiResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObjectApiResponse"
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "ResourceOrgs"
+        ],
+        "summary": "Updates a resourceorg.",
+        "parameters": [
+          {
+            "name": "APIKey",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ResourceOrg"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ResourceOrg"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ResourceOrg"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResourceOrgApiResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObjectApiResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObjectApiResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v2/ResourceOrgs/{id}": {
+      "get": {
+        "tags": [
+          "ResourceOrgs"
+        ],
+        "summary": "Gets a specific resourceorg by ID.",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "APIKey",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResourceOrgApiResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObjectApiResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObjectApiResponse"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "ResourceOrgs"
+        ],
+        "summary": "Deletes a resourceorg.",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "APIKey",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObjectApiResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObjectApiResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObjectApiResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v2/ResourceOrgs/PostConfig": {
+      "post": {
+        "tags": [
+          "ResourceOrgs"
+        ],
+        "summary": "Updates all resource orgs.",
+        "parameters": [
+          {
+            "name": "APIKey",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/ResourceOrg"
+                }
+              }
+            },
+            "text/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/ResourceOrg"
+                }
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/ResourceOrg"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResourceOrgListApiResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObjectApiResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObjectApiResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v2/ResourceProjAppSvcs": {
+      "get": {
+        "tags": [
+          "ResourceProjAppSvcs"
+        ],
+        "summary": "Gets all resource proj app svcs.",
+        "parameters": [
+          {
+            "name": "APIKey",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResourceProjAppSvcListApiResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObjectApiResponse"
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "ResourceProjAppSvcs"
+        ],
+        "summary": "Updates a resourceprojappsvc.",
+        "parameters": [
+          {
+            "name": "APIKey",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ResourceProjAppSvc"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ResourceProjAppSvc"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ResourceProjAppSvc"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResourceProjAppSvcApiResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObjectApiResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObjectApiResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v2/ResourceProjAppSvcs/{id}": {
+      "get": {
+        "tags": [
+          "ResourceProjAppSvcs"
+        ],
+        "summary": "Gets a specific resourceprojappsvc by ID.",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "APIKey",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResourceProjAppSvcApiResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObjectApiResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObjectApiResponse"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "ResourceProjAppSvcs"
+        ],
+        "summary": "Deletes a resourceprojappsvc.",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "APIKey",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObjectApiResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObjectApiResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObjectApiResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v2/ResourceProjAppSvcs/PostConfig": {
+      "post": {
+        "tags": [
+          "ResourceProjAppSvcs"
+        ],
+        "summary": "Updates all resource proj app svcs.",
+        "parameters": [
+          {
+            "name": "APIKey",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/ResourceProjAppSvc"
+                }
+              }
+            },
+            "text/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/ResourceProjAppSvc"
+                }
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/ResourceProjAppSvc"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResourceProjAppSvcListApiResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObjectApiResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObjectApiResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v2/ResourceTypes": {
+      "get": {
+        "tags": [
+          "ResourceTypes"
+        ],
+        "summary": "Get all resource types.",
+        "parameters": [
+          {
+            "name": "admin",
+            "in": "query",
+            "description": "bool - Indicates if the user is an admin (optional)",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          },
+          {
+            "name": "APIKey",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResourceTypeListApiResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObjectApiResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObjectApiResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObjectApiResponse"
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "ResourceTypes"
+        ],
+        "summary": "Update resource type configuration (bulk update).",
+        "parameters": [
+          {
+            "name": "APIKey",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "List of resource types to update",
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/ResourceType"
+                }
+              }
+            },
+            "text/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/ResourceType"
+                }
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/ResourceType"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StringApiResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObjectApiResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObjectApiResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObjectApiResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v2/ResourceTypes/{id}": {
+      "get": {
+        "tags": [
+          "ResourceTypes"
+        ],
+        "summary": "Get a specific resource type by ID.",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "int - Resource Type id",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "APIKey",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResourceTypeApiResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObjectApiResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObjectApiResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObjectApiResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObjectApiResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v2/ResourceUnitDepts": {
+      "get": {
+        "tags": [
+          "ResourceUnitDepts"
+        ],
+        "summary": "Gets all resource unit depts.",
+        "parameters": [
+          {
+            "name": "APIKey",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResourceUnitDeptListApiResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObjectApiResponse"
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "ResourceUnitDepts"
+        ],
+        "summary": "Updates a resourceunitdept.",
+        "parameters": [
+          {
+            "name": "APIKey",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ResourceUnitDept"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ResourceUnitDept"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ResourceUnitDept"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResourceUnitDeptApiResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObjectApiResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObjectApiResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v2/ResourceUnitDepts/{id}": {
+      "get": {
+        "tags": [
+          "ResourceUnitDepts"
+        ],
+        "summary": "Gets a specific resourceunitdept by ID.",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "APIKey",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResourceUnitDeptApiResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObjectApiResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObjectApiResponse"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "ResourceUnitDepts"
+        ],
+        "summary": "Deletes a resourceunitdept.",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "APIKey",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObjectApiResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObjectApiResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObjectApiResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v2/ResourceUnitDepts/PostConfig": {
+      "post": {
+        "tags": [
+          "ResourceUnitDepts"
+        ],
+        "summary": "Updates all resource unit depts.",
+        "parameters": [
+          {
+            "name": "APIKey",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/ResourceUnitDept"
+                }
+              }
+            },
+            "text/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/ResourceUnitDept"
+                }
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/ResourceUnitDept"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResourceUnitDeptListApiResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObjectApiResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObjectApiResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "AdminLogMessage": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "description": "Gets or sets the ID of the log message.",
+            "format": "int64",
+            "nullable": true
+          },
+          "createdOn": {
+            "type": "string",
+            "description": "Gets or sets the date and time when the log message was created.",
+            "format": "date-time"
+          },
+          "title": {
+            "type": "string",
+            "description": "Gets or sets the title of the log message.",
+            "nullable": true
+          },
+          "message": {
+            "type": "string",
+            "description": "Gets or sets the content of the log message.",
+            "nullable": true
+          },
+          "source": {
+            "type": "string",
+            "description": "Gets or sets the source of the log message.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Represents an admin log message."
+      },
+      "AdminUser": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "description": "Gets or sets the ID of the admin user.",
+            "format": "int32"
+          },
+          "name": {
+            "type": "string",
+            "description": "Gets or sets the name of the admin user.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Represents an admin user."
+      },
+      "ApiError": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "string",
+            "description": "Error code (e.g., \"InvalidInput\", \"ResourceNotFound\").",
+            "nullable": true
+          },
+          "message": {
+            "type": "string",
+            "description": "Human-readable error message.",
+            "nullable": true
+          },
+          "target": {
+            "type": "string",
+            "description": "The target of the error (e.g., field name).",
+            "nullable": true
+          },
+          "details": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ApiError"
+            },
+            "description": "Detailed error information.",
+            "nullable": true
+          },
+          "innerError": {
+            "$ref": "#/components/schemas/ApiInnerError"
+          }
+        },
+        "additionalProperties": false,
+        "description": "API error information following Microsoft REST API Guidelines."
+      },
+      "ApiInnerError": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "string",
+            "description": "More specific error code.",
+            "nullable": true
+          },
+          "innerError": {
+            "$ref": "#/components/schemas/ApiInnerError"
+          }
+        },
+        "additionalProperties": false,
+        "description": "Inner error details for debugging purposes."
+      },
+      "ApiMetadata": {
+        "type": "object",
+        "properties": {
+          "correlationId": {
+            "type": "string",
+            "description": "Correlation ID for request tracking (set by middleware).",
+            "nullable": true
+          },
+          "timestamp": {
+            "type": "string",
+            "description": "Timestamp when the response was generated (UTC).",
+            "format": "date-time"
+          },
+          "version": {
+            "type": "string",
+            "description": "API version (optional).",
+            "nullable": true
+          },
+          "message": {
+            "type": "string",
+            "description": "Optional message about the response.",
+            "nullable": true
+          },
+          "pagination": {
+            "$ref": "#/components/schemas/PaginationMetadata"
+          }
+        },
+        "additionalProperties": false,
+        "description": "Metadata about the API request/response."
+      },
+      "AzureValidationMetadata": {
+        "type": "object",
+        "properties": {
+          "validationPerformed": {
+            "type": "boolean",
+            "description": "Gets or sets a value indicating whether Azure validation was performed"
+          },
+          "existsInAzure": {
+            "type": "boolean",
+            "description": "Gets or sets a value indicating whether the name exists in Azure"
+          },
+          "originalName": {
+            "type": "string",
+            "description": "Gets or sets the original name before any auto-increment modifications",
+            "nullable": true
+          },
+          "incrementAttempts": {
+            "type": "integer",
+            "description": "Gets or sets the number of increment attempts made to find a unique name",
+            "format": "int32",
+            "nullable": true
+          },
+          "conflictingResources": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Gets or sets the list of conflicting resource IDs found in Azure",
+            "nullable": true
+          },
+          "validationWarning": {
+            "type": "string",
+            "description": "Gets or sets the validation warning message (if any)",
+            "nullable": true
+          },
+          "validationTimestamp": {
+            "type": "string",
+            "description": "Gets or sets the timestamp when validation was performed",
+            "format": "date-time",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Metadata about Azure validation performed on a generated name"
+      },
+      "BulkResourceNameRequest": {
+        "type": "object",
+        "properties": {
+          "resourceTypes": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Gets or sets the list of resource types to generate names for.",
+            "nullable": true
+          },
+          "resourceEnvironment": {
+            "type": "string",
+            "description": "Gets or sets the shared resource environment for all resources.",
+            "nullable": true
+          },
+          "resourceFunction": {
+            "type": "string",
+            "description": "Gets or sets the shared resource function for all resources.",
+            "nullable": true
+          },
+          "resourceInstance": {
+            "type": "string",
+            "description": "Gets or sets the shared resource instance for all resources.",
+            "nullable": true
+          },
+          "resourceLocation": {
+            "type": "string",
+            "description": "Gets or sets the shared resource location for all resources.",
+            "nullable": true
+          },
+          "resourceOrg": {
+            "type": "string",
+            "description": "Gets or sets the shared resource organization for all resources.",
+            "nullable": true
+          },
+          "resourceProjAppSvc": {
+            "type": "string",
+            "description": "Gets or sets the shared resource project or application service for all resources.",
+            "nullable": true
+          },
+          "resourceUnitDept": {
+            "type": "string",
+            "description": "Gets or sets the shared resource unit or department for all resources.",
+            "nullable": true
+          },
+          "customComponents": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "string"
+            },
+            "description": "Gets or sets the shared custom components for all resources.",
+            "nullable": true
+          },
+          "resourceTypeOverrides": {
+            "type": "object",
+            "additionalProperties": {
+              "$ref": "#/components/schemas/ResourceTypeOverride"
+            },
+            "description": "Gets or sets per-resource type overrides.",
+            "nullable": true
+          },
+          "continueOnError": {
+            "type": "boolean",
+            "description": "Gets or sets whether to continue processing if an individual resource name generation fails."
+          },
+          "validateOnly": {
+            "type": "boolean",
+            "description": "Gets or sets whether to only validate the names without saving to the database."
+          },
+          "createdBy": {
+            "type": "string",
+            "description": "Gets or sets the creator of the resources.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Represents a bulk resource name generation request."
+      },
+      "BulkResourceNameResponse": {
+        "type": "object",
+        "properties": {
+          "results": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/BulkResourceNameResult"
+            },
+            "description": "Gets or sets the list of individual resource name generation results.",
+            "nullable": true
+          },
+          "success": {
+            "type": "boolean",
+            "description": "Gets or sets the overall success status."
+          },
+          "message": {
+            "type": "string",
+            "description": "Gets or sets the overall message.",
+            "nullable": true
+          },
+          "totalRequested": {
+            "type": "integer",
+            "description": "Gets or sets the total number of resources requested.",
+            "format": "int32"
+          },
+          "successCount": {
+            "type": "integer",
+            "description": "Gets or sets the number of successfully generated resource names.",
+            "format": "int32"
+          },
+          "failureCount": {
+            "type": "integer",
+            "description": "Gets or sets the number of failed resource name generations.",
+            "format": "int32"
+          },
+          "processedAt": {
+            "type": "string",
+            "description": "Gets or sets the timestamp when the bulk operation was processed.",
+            "format": "date-time"
+          }
+        },
+        "additionalProperties": false,
+        "description": "Represents the response from a bulk resource name generation request."
+      },
+      "BulkResourceNameResponseApiResponse": {
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean",
+            "description": "Indicates if the request was successful."
+          },
+          "data": {
+            "$ref": "#/components/schemas/BulkResourceNameResponse"
+          },
+          "error": {
+            "$ref": "#/components/schemas/ApiError"
+          },
+          "metadata": {
+            "$ref": "#/components/schemas/ApiMetadata"
+          }
+        },
+        "additionalProperties": false,
+        "description": "Standardized API response wrapper for consistent response format.\nThis is an optional model for future API versions to maintain consistency."
+      },
+      "BulkResourceNameResult": {
+        "type": "object",
+        "properties": {
+          "resourceType": {
+            "type": "string",
+            "description": "Gets or sets the resource type that was processed.",
+            "nullable": true
+          },
+          "success": {
+            "type": "boolean",
+            "description": "Gets or sets whether this resource name was generated successfully."
+          },
+          "resourceName": {
+            "type": "string",
+            "description": "Gets or sets the generated resource name.",
+            "nullable": true
+          },
+          "errorMessage": {
+            "type": "string",
+            "description": "Gets or sets the error message if generation failed.",
+            "nullable": true
+          },
+          "resourceNameDetails": {
+            "$ref": "#/components/schemas/GeneratedName"
+          },
+          "validationErrors": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Gets or sets validation errors if any.",
+            "nullable": true
+          },
+          "validationMetadata": {
+            "$ref": "#/components/schemas/AzureValidationMetadata"
+          }
+        },
+        "additionalProperties": false,
+        "description": "Represents the result of a single resource name generation in a bulk operation."
+      },
+      "ConfigurationData": {
+        "type": "object",
+        "properties": {
+          "resourceComponents": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ResourceComponent"
+            },
+            "description": "Gets or sets the list of resource components.",
+            "nullable": true
+          },
+          "resourceDelimiters": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ResourceDelimiter"
+            },
+            "description": "Gets or sets the list of resource delimiters.",
+            "nullable": true
+          },
+          "resourceEnvironments": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ResourceEnvironment"
+            },
+            "description": "Gets or sets the list of resource environments.",
+            "nullable": true
+          },
+          "resourceLocations": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ResourceLocation"
+            },
+            "description": "Gets or sets the list of resource locations.",
+            "nullable": true
+          },
+          "resourceOrgs": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ResourceOrg"
+            },
+            "description": "Gets or sets the list of resource organizations.",
+            "nullable": true
+          },
+          "resourceProjAppSvcs": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ResourceProjAppSvc"
+            },
+            "description": "Gets or sets the list of resource project application services.",
+            "nullable": true
+          },
+          "resourceTypes": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ResourceType"
+            },
+            "description": "Gets or sets the list of resource types.",
+            "nullable": true
+          },
+          "resourceUnitDepts": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ResourceUnitDept"
+            },
+            "description": "Gets or sets the list of resource unit departments.",
+            "nullable": true
+          },
+          "resourceFunctions": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ResourceFunction"
+            },
+            "description": "Gets or sets the list of resource functions.",
+            "nullable": true
+          },
+          "customComponents": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CustomComponent"
+            },
+            "description": "Gets or sets the list of custom components.",
+            "nullable": true
+          },
+          "generatedNames": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/GeneratedName"
+            },
+            "description": "Gets or sets the list of generated names.",
+            "nullable": true
+          },
+          "adminLogs": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/AdminLogMessage"
+            },
+            "description": "Gets or sets the list of admin log messages.",
+            "nullable": true
+          },
+          "adminUsers": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/AdminUser"
+            },
+            "description": "Gets or sets the list of admin users.",
+            "nullable": true
+          },
+          "saltKey": {
+            "type": "string",
+            "description": "Gets or sets the SALT key.",
+            "nullable": true
+          },
+          "adminPassword": {
+            "type": "string",
+            "description": "Gets or sets the admin password.",
+            "nullable": true
+          },
+          "apiKey": {
+            "type": "string",
+            "description": "Gets or sets the API key.",
+            "nullable": true
+          },
+          "readOnlyAPIKey": {
+            "type": "string",
+            "description": "Gets or sets the read-only API key.",
+            "nullable": true
+          },
+          "nameGenerationAPIKey": {
+            "type": "string",
+            "description": "Gets or sets the Name Generation API key.",
+            "nullable": true
+          },
+          "dismissedAlerts": {
+            "type": "string",
+            "description": "Gets or sets the dismissed alerts.",
+            "nullable": true
+          },
+          "duplicateNamesAllowed": {
+            "type": "string",
+            "description": "Gets or sets whether duplicate names are allowed.",
+            "nullable": true
+          },
+          "generationWebhook": {
+            "type": "string",
+            "description": "Gets or sets the generation webhook.",
+            "nullable": true
+          },
+          "connectivityCheckEnabled": {
+            "type": "string",
+            "description": "Gets or sets whether connectivity check is enabled.",
+            "nullable": true
+          },
+          "identityHeaderName": {
+            "type": "string",
+            "description": "Gets or sets the identity header name.",
+            "nullable": true
+          },
+          "resourceTypeEditingAllowed": {
+            "type": "string",
+            "description": "Gets or sets whether resource type editing is allowed.",
+            "nullable": true
+          },
+          "autoIncrementResourceInstance": {
+            "type": "string",
+            "description": "Gets or sets whether auto-increment resource instance is enabled.",
+            "nullable": true
+          },
+          "instructionsEnabled": {
+            "type": "string",
+            "description": "Gets or sets whether instructions are enabled.",
+            "nullable": true
+          },
+          "generatedNamesLogEnabled": {
+            "type": "string",
+            "description": "Gets or sets whether generated names log is enabled.",
+            "nullable": true
+          },
+          "referenceEnabled": {
+            "type": "string",
+            "description": "Gets or sets a value indicating whether reference is enabled.",
+            "nullable": true
+          },
+          "configurationEnabled": {
+            "type": "string",
+            "description": "Gets or sets a value indicating whether configuration is enabled.",
+            "nullable": true
+          },
+          "latestNewsEnabled": {
+            "type": "string",
+            "description": "Gets or sets whether latest news is enabled.",
+            "nullable": true
+          },
+          "retainGenerateSelections": {
+            "type": "string",
+            "description": "Gets or sets whether retaining of Generate opage selections is enabled.",
+            "nullable": true
+          },
+          "customHomeContent": {
+            "type": "string",
+            "description": "Gets or sets custom Home content.",
+            "nullable": true
+          },
+          "customLogoPath": {
+            "type": "string",
+            "description": "Gets or sets custom Logo path.",
+            "nullable": true
+          },
+          "customToolName": {
+            "type": "string",
+            "description": "Gets or sets custom tool name.",
+            "nullable": true
+          },
+          "showAdminDetailsToAllUsers": {
+            "type": "string",
+            "description": "Gets or sets whether admin details are shown to all users.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Represents the configuration data for the application."
+      },
+      "ConfigurationDataApiResponse": {
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean",
+            "description": "Indicates if the request was successful."
+          },
+          "data": {
+            "$ref": "#/components/schemas/ConfigurationData"
+          },
+          "error": {
+            "$ref": "#/components/schemas/ApiError"
+          },
+          "metadata": {
+            "$ref": "#/components/schemas/ApiMetadata"
+          }
+        },
+        "additionalProperties": false,
+        "description": "Standardized API response wrapper for consistent response format.\nThis is an optional model for future API versions to maintain consistency."
+      },
+      "CustomComponent": {
+        "required": [
+          "name",
+          "parentComponent",
+          "shortName"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "description": "Gets or sets the ID of the custom component.",
+            "format": "int64"
+          },
+          "parentComponent": {
+            "minLength": 1,
+            "type": "string",
+            "description": "Gets or sets the parent component of the custom component."
+          },
+          "name": {
+            "minLength": 1,
+            "type": "string",
+            "description": "Gets or sets the name of the custom component."
+          },
+          "shortName": {
+            "minLength": 1,
+            "type": "string",
+            "description": "Gets or sets the short name of the custom component."
+          },
+          "sortOrder": {
+            "type": "integer",
+            "description": "Gets or sets the sort order of the custom component.",
+            "format": "int32"
+          },
+          "minLength": {
+            "type": "string",
+            "description": "Gets or sets the minimum length of the custom component.",
+            "nullable": true
+          },
+          "maxLength": {
+            "type": "string",
+            "description": "Gets or sets the maximum length of the custom component.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Represents a custom component."
+      },
+      "CustomComponentApiResponse": {
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean",
+            "description": "Indicates if the request was successful."
+          },
+          "data": {
+            "$ref": "#/components/schemas/CustomComponent"
+          },
+          "error": {
+            "$ref": "#/components/schemas/ApiError"
+          },
+          "metadata": {
+            "$ref": "#/components/schemas/ApiMetadata"
+          }
+        },
+        "additionalProperties": false,
+        "description": "Standardized API response wrapper for consistent response format.\nThis is an optional model for future API versions to maintain consistency."
+      },
+      "CustomComponentListApiResponse": {
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean",
+            "description": "Indicates if the request was successful."
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CustomComponent"
+            },
+            "description": "The response data (null if request failed).",
+            "nullable": true
+          },
+          "error": {
+            "$ref": "#/components/schemas/ApiError"
+          },
+          "metadata": {
+            "$ref": "#/components/schemas/ApiMetadata"
+          }
+        },
+        "additionalProperties": false,
+        "description": "Standardized API response wrapper for consistent response format.\nThis is an optional model for future API versions to maintain consistency."
+      },
+      "GeneratedName": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "description": "Gets or sets the ID of the generated name.",
+            "format": "int64"
+          },
+          "createdOn": {
+            "type": "string",
+            "description": "Gets or sets the date and time when the generated name was created.",
+            "format": "date-time"
+          },
+          "resourceName": {
+            "type": "string",
+            "description": "Gets or sets the resource name.",
+            "nullable": true
+          },
+          "resourceTypeName": {
+            "type": "string",
+            "description": "Gets or sets the resource type name.",
+            "nullable": true
+          },
+          "components": {
+            "type": "array",
+            "items": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "description": "Gets or sets the components of the generated name.",
+            "nullable": true
+          },
+          "user": {
+            "type": "string",
+            "description": "Gets or sets the user who generated the name.",
+            "nullable": true
+          },
+          "message": {
+            "type": "string",
+            "description": "Gets or sets the optional message associated with the generated name.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Represents a generated name."
+      },
+      "ObjectApiResponse": {
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean",
+            "description": "Indicates if the request was successful."
+          },
+          "data": {
+            "description": "The response data (null if request failed).",
+            "nullable": true
+          },
+          "error": {
+            "$ref": "#/components/schemas/ApiError"
+          },
+          "metadata": {
+            "$ref": "#/components/schemas/ApiMetadata"
+          }
+        },
+        "additionalProperties": false,
+        "description": "Standardized API response wrapper for consistent response format.\nThis is an optional model for future API versions to maintain consistency."
+      },
+      "PaginationMetadata": {
+        "type": "object",
+        "properties": {
+          "page": {
+            "type": "integer",
+            "description": "Current page number.",
+            "format": "int32"
+          },
+          "pageSize": {
+            "type": "integer",
+            "description": "Number of items per page.",
+            "format": "int32"
+          },
+          "totalItems": {
+            "type": "integer",
+            "description": "Total number of items across all pages.",
+            "format": "int32"
+          },
+          "totalPages": {
+            "type": "integer",
+            "description": "Total number of pages.",
+            "format": "int32"
+          },
+          "hasPrevious": {
+            "type": "boolean",
+            "description": "Indicates if there is a previous page.",
+            "readOnly": true
+          },
+          "hasNext": {
+            "type": "boolean",
+            "description": "Indicates if there is a next page.",
+            "readOnly": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Pagination information for list responses."
+      },
+      "ResourceComponent": {
+        "required": [
+          "displayName",
+          "enabled",
+          "name"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "description": "Gets or sets the ID of the resource component.",
+            "format": "int64"
+          },
+          "name": {
+            "minLength": 1,
+            "type": "string",
+            "description": "Gets or sets the name of the resource component."
+          },
+          "displayName": {
+            "minLength": 1,
+            "type": "string",
+            "description": "Gets or sets the display name of the resource component."
+          },
+          "enabled": {
+            "type": "boolean",
+            "description": "Gets or sets a value indicating whether the resource component is enabled."
+          },
+          "sortOrder": {
+            "type": "integer",
+            "description": "Gets or sets the sort order of the resource component.",
+            "format": "int32"
+          },
+          "isCustom": {
+            "type": "boolean",
+            "description": "Gets or sets a value indicating whether the resource component is custom."
+          },
+          "isFreeText": {
+            "type": "boolean",
+            "description": "Gets or sets a value indicating whether the resource component is free text."
+          },
+          "minLength": {
+            "type": "string",
+            "description": "Gets or sets the minimum length of the resource component.",
+            "nullable": true
+          },
+          "maxLength": {
+            "type": "string",
+            "description": "Gets or sets the maximum length of the resource component.",
+            "nullable": true
+          },
+          "enforceRandom": {
+            "type": "boolean",
+            "description": "Gets or sets a value indicating whether to enforce randomization of the resource component."
+          },
+          "alphanumeric": {
+            "type": "boolean",
+            "description": "Gets or sets a value indicating whether the resource component should be alphanumeric."
+          },
+          "applyDelimiterBefore": {
+            "type": "boolean",
+            "description": "Gets or sets a value indicating whether to apply a delimiter before the resource component."
+          },
+          "applyDelimiterAfter": {
+            "type": "boolean",
+            "description": "Gets or sets a value indicating whether to apply a delimiter after the resource component."
+          },
+          "description": {
+            "type": "string",
+            "description": "Gets or sets the resource component description.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Represents a resource component."
+      },
+      "ResourceComponentApiResponse": {
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean",
+            "description": "Indicates if the request was successful."
+          },
+          "data": {
+            "$ref": "#/components/schemas/ResourceComponent"
+          },
+          "error": {
+            "$ref": "#/components/schemas/ApiError"
+          },
+          "metadata": {
+            "$ref": "#/components/schemas/ApiMetadata"
+          }
+        },
+        "additionalProperties": false,
+        "description": "Standardized API response wrapper for consistent response format.\nThis is an optional model for future API versions to maintain consistency."
+      },
+      "ResourceComponentListApiResponse": {
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean",
+            "description": "Indicates if the request was successful."
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ResourceComponent"
+            },
+            "description": "The response data (null if request failed).",
+            "nullable": true
+          },
+          "error": {
+            "$ref": "#/components/schemas/ApiError"
+          },
+          "metadata": {
+            "$ref": "#/components/schemas/ApiMetadata"
+          }
+        },
+        "additionalProperties": false,
+        "description": "Standardized API response wrapper for consistent response format.\nThis is an optional model for future API versions to maintain consistency."
+      },
+      "ResourceDelimiter": {
+        "required": [
+          "enabled",
+          "name"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "description": "Gets or sets the ID of the resource delimiter.",
+            "format": "int64"
+          },
+          "name": {
+            "minLength": 1,
+            "type": "string",
+            "description": "Gets or sets the name of the resource delimiter."
+          },
+          "delimiter": {
+            "type": "string",
+            "description": "Gets or sets the delimiter of the resource delimiter.",
+            "nullable": true
+          },
+          "enabled": {
+            "type": "boolean",
+            "description": "Gets or sets a value indicating whether the resource delimiter is enabled."
+          },
+          "sortOrder": {
+            "type": "integer",
+            "description": "Gets or sets the sort order of the resource delimiter.",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false,
+        "description": "Represents a resource delimiter."
+      },
+      "ResourceDelimiterApiResponse": {
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean",
+            "description": "Indicates if the request was successful."
+          },
+          "data": {
+            "$ref": "#/components/schemas/ResourceDelimiter"
+          },
+          "error": {
+            "$ref": "#/components/schemas/ApiError"
+          },
+          "metadata": {
+            "$ref": "#/components/schemas/ApiMetadata"
+          }
+        },
+        "additionalProperties": false,
+        "description": "Standardized API response wrapper for consistent response format.\nThis is an optional model for future API versions to maintain consistency."
+      },
+      "ResourceDelimiterListApiResponse": {
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean",
+            "description": "Indicates if the request was successful."
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ResourceDelimiter"
+            },
+            "description": "The response data (null if request failed).",
+            "nullable": true
+          },
+          "error": {
+            "$ref": "#/components/schemas/ApiError"
+          },
+          "metadata": {
+            "$ref": "#/components/schemas/ApiMetadata"
+          }
+        },
+        "additionalProperties": false,
+        "description": "Standardized API response wrapper for consistent response format.\nThis is an optional model for future API versions to maintain consistency."
+      },
+      "ResourceEnvironment": {
+        "required": [
+          "name",
+          "shortName"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "description": "Gets or sets the ID of the resource environment.",
+            "format": "int64"
+          },
+          "name": {
+            "minLength": 1,
+            "type": "string",
+            "description": "Gets or sets the name of the resource environment."
+          },
+          "shortName": {
+            "minLength": 1,
+            "type": "string",
+            "description": "Gets or sets the short name of the resource environment."
+          },
+          "sortOrder": {
+            "type": "integer",
+            "description": "Gets or sets the sort order of the resource environment.",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false,
+        "description": "Represents a resource environment."
+      },
+      "ResourceEnvironmentApiResponse": {
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean",
+            "description": "Indicates if the request was successful."
+          },
+          "data": {
+            "$ref": "#/components/schemas/ResourceEnvironment"
+          },
+          "error": {
+            "$ref": "#/components/schemas/ApiError"
+          },
+          "metadata": {
+            "$ref": "#/components/schemas/ApiMetadata"
+          }
+        },
+        "additionalProperties": false,
+        "description": "Standardized API response wrapper for consistent response format.\nThis is an optional model for future API versions to maintain consistency."
+      },
+      "ResourceEnvironmentListApiResponse": {
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean",
+            "description": "Indicates if the request was successful."
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ResourceEnvironment"
+            },
+            "description": "The response data (null if request failed).",
+            "nullable": true
+          },
+          "error": {
+            "$ref": "#/components/schemas/ApiError"
+          },
+          "metadata": {
+            "$ref": "#/components/schemas/ApiMetadata"
+          }
+        },
+        "additionalProperties": false,
+        "description": "Standardized API response wrapper for consistent response format.\nThis is an optional model for future API versions to maintain consistency."
+      },
+      "ResourceFunction": {
+        "required": [
+          "name",
+          "shortName"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "description": "Gets or sets the ID of the resource function.",
+            "format": "int64"
+          },
+          "name": {
+            "minLength": 1,
+            "type": "string",
+            "description": "Gets or sets the name of the resource function."
+          },
+          "shortName": {
+            "minLength": 1,
+            "type": "string",
+            "description": "Gets or sets the short name of the resource function."
+          },
+          "sortOrder": {
+            "type": "integer",
+            "description": "Gets or sets the sort order of the resource function.",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false,
+        "description": "Represents a resource function."
+      },
+      "ResourceFunctionApiResponse": {
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean",
+            "description": "Indicates if the request was successful."
+          },
+          "data": {
+            "$ref": "#/components/schemas/ResourceFunction"
+          },
+          "error": {
+            "$ref": "#/components/schemas/ApiError"
+          },
+          "metadata": {
+            "$ref": "#/components/schemas/ApiMetadata"
+          }
+        },
+        "additionalProperties": false,
+        "description": "Standardized API response wrapper for consistent response format.\nThis is an optional model for future API versions to maintain consistency."
+      },
+      "ResourceFunctionListApiResponse": {
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean",
+            "description": "Indicates if the request was successful."
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ResourceFunction"
+            },
+            "description": "The response data (null if request failed).",
+            "nullable": true
+          },
+          "error": {
+            "$ref": "#/components/schemas/ApiError"
+          },
+          "metadata": {
+            "$ref": "#/components/schemas/ApiMetadata"
+          }
+        },
+        "additionalProperties": false,
+        "description": "Standardized API response wrapper for consistent response format.\nThis is an optional model for future API versions to maintain consistency."
+      },
+      "ResourceLocation": {
+        "required": [
+          "name",
+          "shortName"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "description": "Gets or sets the ID of the resource location.",
+            "format": "int64"
+          },
+          "name": {
+            "minLength": 1,
+            "type": "string",
+            "description": "Gets or sets the name of the resource location."
+          },
+          "shortName": {
+            "minLength": 1,
+            "type": "string",
+            "description": "Gets or sets the short name of the resource location."
+          },
+          "enabled": {
+            "type": "boolean",
+            "description": "Gets or sets a value indicating whether the resource location is enabled."
+          }
+        },
+        "additionalProperties": false,
+        "description": "Represents a resource location."
+      },
+      "ResourceLocationApiResponse": {
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean",
+            "description": "Indicates if the request was successful."
+          },
+          "data": {
+            "$ref": "#/components/schemas/ResourceLocation"
+          },
+          "error": {
+            "$ref": "#/components/schemas/ApiError"
+          },
+          "metadata": {
+            "$ref": "#/components/schemas/ApiMetadata"
+          }
+        },
+        "additionalProperties": false,
+        "description": "Standardized API response wrapper for consistent response format.\nThis is an optional model for future API versions to maintain consistency."
+      },
+      "ResourceLocationListApiResponse": {
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean",
+            "description": "Indicates if the request was successful."
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ResourceLocation"
+            },
+            "description": "The response data (null if request failed).",
+            "nullable": true
+          },
+          "error": {
+            "$ref": "#/components/schemas/ApiError"
+          },
+          "metadata": {
+            "$ref": "#/components/schemas/ApiMetadata"
+          }
+        },
+        "additionalProperties": false,
+        "description": "Standardized API response wrapper for consistent response format.\nThis is an optional model for future API versions to maintain consistency."
+      },
+      "ResourceNameRequest": {
+        "type": "object",
+        "properties": {
+          "resourceEnvironment": {
+            "type": "string",
+            "description": "Gets or sets the resource environment.",
+            "nullable": true
+          },
+          "resourceFunction": {
+            "type": "string",
+            "description": "Gets or sets the resource function.",
+            "nullable": true
+          },
+          "resourceInstance": {
+            "type": "string",
+            "description": "Gets or sets the resource instance.",
+            "nullable": true
+          },
+          "resourceLocation": {
+            "type": "string",
+            "description": "Gets or sets the resource location.",
+            "nullable": true
+          },
+          "resourceOrg": {
+            "type": "string",
+            "description": "Gets or sets the resource organization.",
+            "nullable": true
+          },
+          "resourceProjAppSvc": {
+            "type": "string",
+            "description": "Gets or sets the resource project or application service.",
+            "nullable": true
+          },
+          "resourceType": {
+            "type": "string",
+            "description": "Gets or sets the resource type.",
+            "nullable": true
+          },
+          "resourceUnitDept": {
+            "type": "string",
+            "description": "Gets or sets the resource unit or department.",
+            "nullable": true
+          },
+          "customComponents": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "string"
+            },
+            "description": "Gets or sets the custom components.",
+            "nullable": true
+          },
+          "resourceId": {
+            "type": "integer",
+            "description": "Gets or sets the resource ID.",
+            "format": "int64"
+          },
+          "createdBy": {
+            "type": "string",
+            "description": "Gets or sets the creator of the resource.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Represents a resource name request."
+      },
+      "ResourceNameRequestWithComponents": {
+        "type": "object",
+        "properties": {
+          "resourceDelimiter": {
+            "$ref": "#/components/schemas/ResourceDelimiter"
+          },
+          "resourceEnvironment": {
+            "$ref": "#/components/schemas/ResourceEnvironment"
+          },
+          "resourceFunction": {
+            "$ref": "#/components/schemas/ResourceFunction"
+          },
+          "resourceInstance": {
+            "type": "string",
+            "description": "Represents the resource instance.",
+            "nullable": true
+          },
+          "resourceLocation": {
+            "$ref": "#/components/schemas/ResourceLocation"
+          },
+          "resourceOrg": {
+            "$ref": "#/components/schemas/ResourceOrg"
+          },
+          "resourceProjAppSvc": {
+            "$ref": "#/components/schemas/ResourceProjAppSvc"
+          },
+          "resourceType": {
+            "$ref": "#/components/schemas/ResourceType"
+          },
+          "resourceUnitDept": {
+            "$ref": "#/components/schemas/ResourceUnitDept"
+          }
+        },
+        "additionalProperties": false,
+        "description": "Represents a resource name request with components."
+      },
+      "ResourceNameResponse": {
+        "type": "object",
+        "properties": {
+          "resourceName": {
+            "type": "string",
+            "description": "Gets or sets the resource name.",
+            "nullable": true
+          },
+          "message": {
+            "type": "string",
+            "description": "Gets or sets the message.",
+            "nullable": true
+          },
+          "success": {
+            "type": "boolean",
+            "description": "Gets or sets a value indicating whether the operation was successful."
+          },
+          "resourceNameDetails": {
+            "$ref": "#/components/schemas/GeneratedName"
+          },
+          "validationMetadata": {
+            "$ref": "#/components/schemas/AzureValidationMetadata"
+          }
+        },
+        "additionalProperties": false,
+        "description": "Represents the response containing the resource name information."
+      },
+      "ResourceNameResponseApiResponse": {
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean",
+            "description": "Indicates if the request was successful."
+          },
+          "data": {
+            "$ref": "#/components/schemas/ResourceNameResponse"
+          },
+          "error": {
+            "$ref": "#/components/schemas/ApiError"
+          },
+          "metadata": {
+            "$ref": "#/components/schemas/ApiMetadata"
+          }
+        },
+        "additionalProperties": false,
+        "description": "Standardized API response wrapper for consistent response format.\nThis is an optional model for future API versions to maintain consistency."
+      },
+      "ResourceOrg": {
+        "required": [
+          "name",
+          "shortName"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "description": "Gets or sets the ID of the resource organization.",
+            "format": "int64"
+          },
+          "name": {
+            "minLength": 1,
+            "type": "string",
+            "description": "Gets or sets the name of the resource organization."
+          },
+          "shortName": {
+            "minLength": 1,
+            "type": "string",
+            "description": "Gets or sets the short name of the resource organization."
+          },
+          "sortOrder": {
+            "type": "integer",
+            "description": "Gets or sets the sort order of the resource organization.",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false,
+        "description": "Represents a resource organization."
+      },
+      "ResourceOrgApiResponse": {
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean",
+            "description": "Indicates if the request was successful."
+          },
+          "data": {
+            "$ref": "#/components/schemas/ResourceOrg"
+          },
+          "error": {
+            "$ref": "#/components/schemas/ApiError"
+          },
+          "metadata": {
+            "$ref": "#/components/schemas/ApiMetadata"
+          }
+        },
+        "additionalProperties": false,
+        "description": "Standardized API response wrapper for consistent response format.\nThis is an optional model for future API versions to maintain consistency."
+      },
+      "ResourceOrgListApiResponse": {
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean",
+            "description": "Indicates if the request was successful."
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ResourceOrg"
+            },
+            "description": "The response data (null if request failed).",
+            "nullable": true
+          },
+          "error": {
+            "$ref": "#/components/schemas/ApiError"
+          },
+          "metadata": {
+            "$ref": "#/components/schemas/ApiMetadata"
+          }
+        },
+        "additionalProperties": false,
+        "description": "Standardized API response wrapper for consistent response format.\nThis is an optional model for future API versions to maintain consistency."
+      },
+      "ResourceProjAppSvc": {
+        "required": [
+          "name",
+          "shortName"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "description": "Gets or sets the ID of the resource project application service.",
+            "format": "int64"
+          },
+          "name": {
+            "minLength": 1,
+            "type": "string",
+            "description": "Gets or sets the name of the resource project application service."
+          },
+          "shortName": {
+            "minLength": 1,
+            "type": "string",
+            "description": "Gets or sets the short name of the resource project application service."
+          },
+          "sortOrder": {
+            "type": "integer",
+            "description": "Gets or sets the sort order of the resource project application service.",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false,
+        "description": "Represents a resource project application service."
+      },
+      "ResourceProjAppSvcApiResponse": {
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean",
+            "description": "Indicates if the request was successful."
+          },
+          "data": {
+            "$ref": "#/components/schemas/ResourceProjAppSvc"
+          },
+          "error": {
+            "$ref": "#/components/schemas/ApiError"
+          },
+          "metadata": {
+            "$ref": "#/components/schemas/ApiMetadata"
+          }
+        },
+        "additionalProperties": false,
+        "description": "Standardized API response wrapper for consistent response format.\nThis is an optional model for future API versions to maintain consistency."
+      },
+      "ResourceProjAppSvcListApiResponse": {
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean",
+            "description": "Indicates if the request was successful."
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ResourceProjAppSvc"
+            },
+            "description": "The response data (null if request failed).",
+            "nullable": true
+          },
+          "error": {
+            "$ref": "#/components/schemas/ApiError"
+          },
+          "metadata": {
+            "$ref": "#/components/schemas/ApiMetadata"
+          }
+        },
+        "additionalProperties": false,
+        "description": "Standardized API response wrapper for consistent response format.\nThis is an optional model for future API versions to maintain consistency."
+      },
+      "ResourceType": {
+        "required": [
+          "resource"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "description": "Gets or sets the ID of the resource type.",
+            "format": "int64"
+          },
+          "resource": {
+            "minLength": 1,
+            "type": "string",
+            "description": "Gets or sets the resource name."
+          },
+          "optional": {
+            "type": "string",
+            "description": "Gets or sets the optional value.",
+            "nullable": true
+          },
+          "exclude": {
+            "type": "string",
+            "description": "Gets or sets the exclude value.",
+            "nullable": true
+          },
+          "property": {
+            "type": "string",
+            "description": "Gets or sets the property value.",
+            "nullable": true
+          },
+          "ShortName": {
+            "type": "string",
+            "description": "Gets or sets the short name.",
+            "nullable": true
+          },
+          "description": {
+            "type": "string",
+            "description": "Gets or sets the description.",
+            "nullable": true
+          },
+          "scope": {
+            "type": "string",
+            "description": "Gets or sets the scope value.",
+            "nullable": true
+          },
+          "lengthMin": {
+            "type": "string",
+            "description": "Gets or sets the minimum length value.",
+            "nullable": true
+          },
+          "lengthMax": {
+            "type": "string",
+            "description": "Gets or sets the maximum length value.",
+            "nullable": true
+          },
+          "validText": {
+            "type": "string",
+            "description": "Gets or sets the valid text value.",
+            "nullable": true
+          },
+          "invalidText": {
+            "type": "string",
+            "description": "Gets or sets the invalid text value.",
+            "nullable": true
+          },
+          "invalidCharacters": {
+            "type": "string",
+            "description": "Gets or sets the invalid characters value.",
+            "nullable": true
+          },
+          "invalidCharactersStart": {
+            "type": "string",
+            "description": "Gets or sets the invalid characters start value.",
+            "nullable": true
+          },
+          "invalidCharactersEnd": {
+            "type": "string",
+            "description": "Gets or sets the invalid characters end value.",
+            "nullable": true
+          },
+          "invalidCharactersConsecutive": {
+            "type": "string",
+            "description": "Gets or sets the invalid consecutive characters value.",
+            "nullable": true
+          },
+          "regx": {
+            "type": "string",
+            "description": "Gets or sets the regular expression value.",
+            "nullable": true
+          },
+          "staticValues": {
+            "type": "string",
+            "description": "Gets or sets the static values.",
+            "nullable": true
+          },
+          "enabled": {
+            "type": "boolean",
+            "description": "Gets or sets a value indicating whether the resource type is enabled."
+          },
+          "applyDelimiter": {
+            "type": "boolean",
+            "description": "Gets or sets a value indicating whether to apply delimiter."
+          }
+        },
+        "additionalProperties": false,
+        "description": "Represents a resource type."
+      },
+      "ResourceTypeApiResponse": {
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean",
+            "description": "Indicates if the request was successful."
+          },
+          "data": {
+            "$ref": "#/components/schemas/ResourceType"
+          },
+          "error": {
+            "$ref": "#/components/schemas/ApiError"
+          },
+          "metadata": {
+            "$ref": "#/components/schemas/ApiMetadata"
+          }
+        },
+        "additionalProperties": false,
+        "description": "Standardized API response wrapper for consistent response format.\nThis is an optional model for future API versions to maintain consistency."
+      },
+      "ResourceTypeListApiResponse": {
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean",
+            "description": "Indicates if the request was successful."
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ResourceType"
+            },
+            "description": "The response data (null if request failed).",
+            "nullable": true
+          },
+          "error": {
+            "$ref": "#/components/schemas/ApiError"
+          },
+          "metadata": {
+            "$ref": "#/components/schemas/ApiMetadata"
+          }
+        },
+        "additionalProperties": false,
+        "description": "Standardized API response wrapper for consistent response format.\nThis is an optional model for future API versions to maintain consistency."
+      },
+      "ResourceTypeOverride": {
+        "type": "object",
+        "properties": {
+          "resourceEnvironment": {
+            "type": "string",
+            "description": "Gets or sets the resource environment override.",
+            "nullable": true
+          },
+          "resourceFunction": {
+            "type": "string",
+            "description": "Gets or sets the resource function override.",
+            "nullable": true
+          },
+          "resourceInstance": {
+            "type": "string",
+            "description": "Gets or sets the resource instance override.",
+            "nullable": true
+          },
+          "resourceLocation": {
+            "type": "string",
+            "description": "Gets or sets the resource location override.",
+            "nullable": true
+          },
+          "resourceOrg": {
+            "type": "string",
+            "description": "Gets or sets the resource organization override.",
+            "nullable": true
+          },
+          "resourceProjAppSvc": {
+            "type": "string",
+            "description": "Gets or sets the resource project or application service override.",
+            "nullable": true
+          },
+          "resourceUnitDept": {
+            "type": "string",
+            "description": "Gets or sets the resource unit or department override.",
+            "nullable": true
+          },
+          "customComponents": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "string"
+            },
+            "description": "Gets or sets the custom components override.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Represents override values for a specific resource type in a bulk operation."
+      },
+      "ResourceUnitDept": {
+        "required": [
+          "name",
+          "shortName"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "description": "Gets or sets the ID of the resource unit department.",
+            "format": "int64"
+          },
+          "name": {
+            "minLength": 1,
+            "type": "string",
+            "description": "Gets or sets the name of the resource unit department."
+          },
+          "shortName": {
+            "minLength": 1,
+            "type": "string",
+            "description": "Gets or sets the short name of the resource unit department."
+          },
+          "sortOrder": {
+            "type": "integer",
+            "description": "Gets or sets the sort order of the resource unit department.",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false,
+        "description": "Represents a resource unit department."
+      },
+      "ResourceUnitDeptApiResponse": {
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean",
+            "description": "Indicates if the request was successful."
+          },
+          "data": {
+            "$ref": "#/components/schemas/ResourceUnitDept"
+          },
+          "error": {
+            "$ref": "#/components/schemas/ApiError"
+          },
+          "metadata": {
+            "$ref": "#/components/schemas/ApiMetadata"
+          }
+        },
+        "additionalProperties": false,
+        "description": "Standardized API response wrapper for consistent response format.\nThis is an optional model for future API versions to maintain consistency."
+      },
+      "ResourceUnitDeptListApiResponse": {
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean",
+            "description": "Indicates if the request was successful."
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ResourceUnitDept"
+            },
+            "description": "The response data (null if request failed).",
+            "nullable": true
+          },
+          "error": {
+            "$ref": "#/components/schemas/ApiError"
+          },
+          "metadata": {
+            "$ref": "#/components/schemas/ApiMetadata"
+          }
+        },
+        "additionalProperties": false,
+        "description": "Standardized API response wrapper for consistent response format.\nThis is an optional model for future API versions to maintain consistency."
+      },
+      "StringApiResponse": {
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean",
+            "description": "Indicates if the request was successful."
+          },
+          "data": {
+            "type": "string",
+            "description": "The response data (null if request failed).",
+            "nullable": true
+          },
+          "error": {
+            "$ref": "#/components/schemas/ApiError"
+          },
+          "metadata": {
+            "$ref": "#/components/schemas/ApiMetadata"
+          }
+        },
+        "additionalProperties": false,
+        "description": "Standardized API response wrapper for consistent response format.\nThis is an optional model for future API versions to maintain consistency."
+      },
+      "ValidateNameRequest": {
+        "type": "object",
+        "properties": {
+          "resourceTypeId": {
+            "type": "integer",
+            "description": "Gets or sets the resource type ID.",
+            "format": "int64",
+            "nullable": true
+          },
+          "resourceType": {
+            "type": "string",
+            "description": "Gets or sets the resource type.",
+            "nullable": true
+          },
+          "name": {
+            "type": "string",
+            "description": "Gets or sets the name to be validated.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Represents a request to validate a name."
+      },
+      "ValidateNameResponse": {
+        "type": "object",
+        "properties": {
+          "valid": {
+            "type": "boolean",
+            "description": "Gets or sets a value indicating whether the name is valid."
+          },
+          "name": {
+            "type": "string",
+            "description": "Gets or sets the name.",
+            "nullable": true
+          },
+          "message": {
+            "type": "string",
+            "description": "Gets or sets the message associated with the name validation.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Represents the response of name validation."
+      },
+      "ValidateNameResponseApiResponse": {
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean",
+            "description": "Indicates if the request was successful."
+          },
+          "data": {
+            "$ref": "#/components/schemas/ValidateNameResponse"
+          },
+          "error": {
+            "$ref": "#/components/schemas/ApiError"
+          },
+          "metadata": {
+            "$ref": "#/components/schemas/ApiMetadata"
+          }
+        },
+        "additionalProperties": false,
+        "description": "Standardized API response wrapper for consistent response format.\nThis is an optional model for future API versions to maintain consistency."
+      }
+    }
+  },
+  "tags": [
+    {
+      "name": "Admin"
+    },
+    {
+      "name": "CustomComponents"
+    },
+    {
+      "name": "ImportExport"
+    },
+    {
+      "name": "Policy"
+    },
+    {
+      "name": "ResourceComponents"
+    },
+    {
+      "name": "ResourceDelimiters"
+    },
+    {
+      "name": "ResourceEnvironments"
+    },
+    {
+      "name": "ResourceFunctions"
+    },
+    {
+      "name": "ResourceLocations"
+    },
+    {
+      "name": "ResourceNamingRequests"
+    },
+    {
+      "name": "ResourceOrgs"
+    },
+    {
+      "name": "ResourceProjAppSvcs"
+    },
+    {
+      "name": "ResourceTypes"
+    },
+    {
+      "name": "ResourceUnitDepts"
+    }
+  ]
+}

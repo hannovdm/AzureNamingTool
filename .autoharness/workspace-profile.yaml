@@ -1,0 +1,206 @@
+schema_version: "1.0.0"
+generated_by: "auto-mergeinstall agent (Claude Opus 4.7)"
+generated_at: "2026-04-28T12:00:00Z"
+workspace_path: "c:/Users/hannov/OneDrive - Microsoft/Dev/AzureNamingTool"
+workspace_name: "AzureNamingTool"
+
+languages:
+  primary: "C#"
+  primary_lower: "csharp"
+  version: ".NET 10.0"
+  version_detail: "C# / .NET 10.0 (nullable enabled, implicit usings enabled)"
+  secondary: ["JavaScript", "PowerShell", "Bicep"]
+  file_counts:
+    cs: "many"
+    razor: "many"
+    json: "many"
+    ps1: "few"
+    bicep: "few"
+
+frameworks:
+  list:
+    - "ASP.NET Core 10.0"
+    - "Blazor Server (interactive server-side rendering)"
+    - "Entity Framework Core (SQLite)"
+    - "Asp.Versioning"
+  mcp_sdk: null
+  mcp_transport: null
+
+build:
+  tool: "dotnet"
+  command: "dotnet build src/AzureNamingTool.csproj"
+  check_command: "dotnet build src/AzureNamingTool.csproj --no-restore /p:RunAnalyzersDuringBuild=false"
+
+test:
+  runner: "dotnet test"
+  command: "dotnet test tests/AzureNamingTool.UnitTests/AzureNamingTool.UnitTests.csproj"
+  directory: "tests/"
+  ui_command: "dotnet test tests/AzureNamingTool.UiTests/AzureNamingTool.UiTests.csproj"
+  notes: "Unit tests via xunit + Moq + FluentAssertions; UI tests via Playwright + LightBDD + NUnit (net8.0)"
+
+lint:
+  tool: "none"
+  command: "dotnet build src/AzureNamingTool.csproj /p:TreatWarningsAsErrors=false"
+  notes: "No linter configured. Suppresses CS8602, CS8600, CS1998 warnings."
+
+format:
+  tool: "dotnet format"
+  command: "dotnet format src/AzureNamingTool.sln --verify-no-changes"
+  fix_command: "dotnet format src/AzureNamingTool.sln"
+  check_command: "dotnet format src/AzureNamingTool.sln --verify-no-changes"
+
+ci:
+  platform: "GitHub Actions"
+  workflow_glob: "**/.github/workflows/*.yml"
+  notes: "GitHub Actions workflows under .github/workflows/"
+  poll_interval: 30
+  max_wait: 600
+  quality_gates:
+    - "dotnet build src/AzureNamingTool.csproj"
+    - "dotnet test tests/AzureNamingTool.UnitTests/AzureNamingTool.UnitTests.csproj"
+    - "dotnet format src/AzureNamingTool.sln --verify-no-changes"
+
+structure:
+  source_layout: "src/"
+  test_layout: "tests/"
+  doc_layout: "docs/"
+  monorepo: false
+  source_top_level_dirs:
+    - "Components"
+    - "Controllers"
+    - "Services"
+    - "Repositories"
+    - "Models"
+    - "Helpers"
+    - "Data"
+    - "Middleware"
+    - "Attributes"
+    - "HealthChecks"
+
+git:
+  remote: "https://github.com/hannovdm/AzureNamingTool.git"
+  repo_owner: "hannovdm"
+  repo_name: "AzureNamingTool"
+  default_branch: "main"
+  current_branch: "chore/autoharness-install-2026-04-28"
+
+runtime_surfaces:
+  web_ui: true
+  public_api: true
+  background_jobs: false
+  browser_tooling:
+    - "playwright"
+  deployment_manifests:
+    - "src/Dockerfile"
+    - "src/Deployments/AppService-WebApp/"
+
+agent_intercom:
+  detected: false
+  mcp_configured: false
+  config_paths: []
+  instruction_markers: []
+  recommended: false
+
+agent_engram:
+  detected: false
+  mcp_configured: false
+  config_paths: []
+  instruction_markers: []
+  recommended: false
+
+agent_native:
+  detected: false
+  mcp_sdk_present: false
+  mcp_transport: null
+  agent_tooling_markers: []
+  user_agent_parity_required: false
+  recommended_reviewer: false
+
+primary_stack_pack: "web-app"
+stack_packs:
+  - "web-app"
+  - "api-service"
+  - "deployable-service"
+
+strict_safety_signals:
+  - "public API surface (Controllers v1 + v2)"
+  - "EF Core migrations / SQLite schema management"
+  - "Custom [ApiKey] auth attribute (security-sensitive)"
+  - "Dockerfile + AppService deployment manifests (rollout-critical)"
+
+release_observability_signals:
+  - "Dockerfile + App Service deployment configs detected"
+  - "Public web UI + API runtime surfaces"
+  - "Health check endpoints (/health/live, /health/ready, /healthcheck/ping)"
+  - "GitHub Actions CI/CD pipelines"
+
+backlog_tool:
+  detected: false
+  tool_name: "manual"
+  directory: ".backlog"
+  tool_type: null
+  mcp_registered: false
+  cli_available: false
+  config_path: null
+  status_values:
+    - "queued"
+    - "active"
+    - "done"
+    - "blocked"
+  features:
+    sql_query: false
+    milestones: false
+    documents: false
+    telemetry: false
+    shipments: false
+
+vscode:
+  detected: true
+  user_settings_path: "C:\\Users\\hannov\\AppData\\Roaming\\Code\\User\\settings.json"
+  has_agent_settings: false
+
+code_style:
+  editor_config: false
+  prettier: false
+  eslint: false
+  markdownlint: false
+  markdownlint_config: null
+
+distribution:
+  is_global_tool: false
+
+git_conventions:
+  branch_naming: "chore/<description>, feat/<description>, fix/<description>"
+  commit_format: "conventional"
+  pr_template: false
+  issue_template: true
+
+doc_conventions:
+  readme_present: true
+  adrs: true
+  adrs_path: "docs/v5.0.0/adrs/"
+  changelog: false
+  api_docs: "Swagger/OpenAPI (swaggerv2.json)"
+
+existing_harness_artifacts:
+  - ".github/copilot-instructions.md"
+  - ".github/workflows/"
+  - "AGENTS.md (none)"
+
+harness_recommendations:
+  preset: "standard"
+  capability_packs:
+    - "continuous-learning"
+    - "strict-safety"
+    - "release-observability"
+    - "adversarial-review"
+  install_layers:
+    - "foundation"
+    - "instructions"
+    - "workflow"
+    - "review"
+    - "runtime"
+    - "backlog"
+    - "knowledge"
+    - "overlays"
+  project_description: "Azure Naming Tool — ASP.NET Core Blazor Server app for generating standardized Azure resource names. Layered architecture with v1+v2 REST APIs, dual storage backends (FileSystem JSON / SQLite EF Core), and custom API key authentication."

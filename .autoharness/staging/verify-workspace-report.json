@@ -1,0 +1,1063 @@
+{
+  "mode": "verify-workspace",
+  "workspace_path": "C:\\Users\\hannov\\OneDrive - Microsoft\\Dev\\AzureNamingTool",
+  "autoharness_home": "C:\\Users\\hannov\\AppData\\Roaming\\uv\\tools\\autoharness\\Lib\\site-packages\\autoharness\\data",
+  "staging_dir": "C:\\Users\\hannov\\OneDrive - Microsoft\\Dev\\AzureNamingTool\\.autoharness\\staging",
+  "strict_schema_blockers": [],
+  "warnings": [],
+  "warning_instances": 0,
+  "blockers": [],
+  "rendered": [
+    {
+      "path": ".autoharness/config.yaml",
+      "template": "C:\\Users\\hannov\\AppData\\Roaming\\uv\\tools\\autoharness\\Lib\\site-packages\\autoharness\\data\\templates\\harness-config.yaml.tmpl",
+      "mode": "rendered"
+    },
+    {
+      "path": ".backlog/.stash.md",
+      "template": "C:\\Users\\hannov\\AppData\\Roaming\\uv\\tools\\autoharness\\Lib\\site-packages\\autoharness\\data\\templates\\backlog\\stash.md.tmpl",
+      "mode": "rendered"
+    },
+    {
+      "path": ".backlog/config.yml",
+      "template": "C:\\Users\\hannov\\AppData\\Roaming\\uv\\tools\\autoharness\\Lib\\site-packages\\autoharness\\data\\templates\\backlog\\config.yml.tmpl",
+      "mode": "rendered"
+    },
+    {
+      "path": ".github/agents/adversarial-review.agent.md",
+      "template": "C:\\Users\\hannov\\AppData\\Roaming\\uv\\tools\\autoharness\\Lib\\site-packages\\autoharness\\data\\templates\\agents\\adversarial-review.agent.md.tmpl",
+      "mode": "rendered"
+    },
+    {
+      "path": ".github/agents/language-engineer.agent.md",
+      "template": "C:\\Users\\hannov\\AppData\\Roaming\\uv\\tools\\autoharness\\Lib\\site-packages\\autoharness\\data\\templates\\agents\\language-engineer.agent.md.tmpl",
+      "mode": "rendered"
+    },
+    {
+      "path": ".github/agents/prompt-builder.agent.md",
+      "template": "C:\\Users\\hannov\\AppData\\Roaming\\uv\\tools\\autoharness\\Lib\\site-packages\\autoharness\\data\\templates\\agents\\prompt-builder.agent.md.tmpl",
+      "mode": "rendered"
+    },
+    {
+      "path": ".github/agents/research/learnings-researcher.agent.md",
+      "template": "C:\\Users\\hannov\\AppData\\Roaming\\uv\\tools\\autoharness\\Lib\\site-packages\\autoharness\\data\\templates\\agents\\research\\learnings-researcher.agent.md.tmpl",
+      "mode": "rendered"
+    },
+    {
+      "path": ".github/agents/review/agent-native-parity-reviewer.agent.md",
+      "template": "C:\\Users\\hannov\\AppData\\Roaming\\uv\\tools\\autoharness\\Lib\\site-packages\\autoharness\\data\\templates\\agents\\review\\agent-native-parity-reviewer.agent.md.tmpl",
+      "mode": "rendered"
+    },
+    {
+      "path": ".github/agents/review/architecture-strategist.agent.md",
+      "template": "C:\\Users\\hannov\\AppData\\Roaming\\uv\\tools\\autoharness\\Lib\\site-packages\\autoharness\\data\\templates\\agents\\review\\architecture-strategist.agent.md.tmpl",
+      "mode": "rendered"
+    },
+    {
+      "path": ".github/agents/review/concurrency-reviewer.agent.md",
+      "template": "C:\\Users\\hannov\\AppData\\Roaming\\uv\\tools\\autoharness\\Lib\\site-packages\\autoharness\\data\\templates\\agents\\review\\concurrency-reviewer.agent.md.tmpl",
+      "mode": "rendered"
+    },
+    {
+      "path": ".github/agents/review/constitution-reviewer.agent.md",
+      "template": "C:\\Users\\hannov\\AppData\\Roaming\\uv\\tools\\autoharness\\Lib\\site-packages\\autoharness\\data\\templates\\agents\\review\\constitution-reviewer.agent.md.tmpl",
+      "mode": "rendered"
+    },
+    {
+      "path": ".github/agents/review/scope-boundary-auditor.agent.md",
+      "template": "C:\\Users\\hannov\\AppData\\Roaming\\uv\\tools\\autoharness\\Lib\\site-packages\\autoharness\\data\\templates\\agents\\review\\scope-boundary-auditor.agent.md.tmpl",
+      "mode": "rendered"
+    },
+    {
+      "path": ".github/agents/review/technology-reviewer.agent.md",
+      "template": "C:\\Users\\hannov\\AppData\\Roaming\\uv\\tools\\autoharness\\Lib\\site-packages\\autoharness\\data\\templates\\agents\\review\\technology-reviewer.agent.md.tmpl",
+      "mode": "rendered"
+    },
+    {
+      "path": ".github/agents/ship.agent.md",
+      "template": "C:\\Users\\hannov\\AppData\\Roaming\\uv\\tools\\autoharness\\Lib\\site-packages\\autoharness\\data\\templates\\agents\\ship.agent.md.tmpl",
+      "mode": "rendered"
+    },
+    {
+      "path": ".github/agents/stage.agent.md",
+      "template": "C:\\Users\\hannov\\AppData\\Roaming\\uv\\tools\\autoharness\\Lib\\site-packages\\autoharness\\data\\templates\\agents\\stage.agent.md.tmpl",
+      "mode": "rendered"
+    },
+    {
+      "path": ".github/copilot-instructions.md",
+      "template": "C:\\Users\\hannov\\AppData\\Roaming\\uv\\tools\\autoharness\\Lib\\site-packages\\autoharness\\data\\templates\\foundation\\copilot-instructions.md.tmpl",
+      "mode": "rendered"
+    },
+    {
+      "path": ".github/instructions/adversarial-review.instructions.md",
+      "template": "C:\\Users\\hannov\\AppData\\Roaming\\uv\\tools\\autoharness\\Lib\\site-packages\\autoharness\\data\\templates\\instructions\\adversarial-review.instructions.md.tmpl",
+      "mode": "rendered"
+    },
+    {
+      "path": ".github/instructions/agent-engram.instructions.md",
+      "template": "C:\\Users\\hannov\\AppData\\Roaming\\uv\\tools\\autoharness\\Lib\\site-packages\\autoharness\\data\\templates\\instructions\\agent-engram.instructions.md.tmpl",
+      "mode": "rendered"
+    },
+    {
+      "path": ".github/instructions/agent-intercom.instructions.md",
+      "template": "C:\\Users\\hannov\\AppData\\Roaming\\uv\\tools\\autoharness\\Lib\\site-packages\\autoharness\\data\\templates\\instructions\\agent-intercom.instructions.md.tmpl",
+      "mode": "rendered"
+    },
+    {
+      "path": ".github/instructions/architecture-doc.instructions.md",
+      "template": "C:\\Users\\hannov\\AppData\\Roaming\\uv\\tools\\autoharness\\Lib\\site-packages\\autoharness\\data\\templates\\instructions\\architecture-doc.instructions.md.tmpl",
+      "mode": "rendered"
+    },
+    {
+      "path": ".github/instructions/backlog-integration.instructions.md",
+      "template": "C:\\Users\\hannov\\AppData\\Roaming\\uv\\tools\\autoharness\\Lib\\site-packages\\autoharness\\data\\templates\\instructions\\backlog-integration.instructions.md.tmpl",
+      "mode": "rendered"
+    },
+    {
+      "path": ".github/instructions/backlogit-sql-schema.instructions.md",
+      "template": "C:\\Users\\hannov\\AppData\\Roaming\\uv\\tools\\autoharness\\Lib\\site-packages\\autoharness\\data\\templates\\instructions\\backlogit-sql-schema.instructions.md.tmpl",
+      "mode": "rendered"
+    },
+    {
+      "path": ".github/instructions/backlogit-yaml-header-tooling.instructions.md",
+      "template": "C:\\Users\\hannov\\AppData\\Roaming\\uv\\tools\\autoharness\\Lib\\site-packages\\autoharness\\data\\templates\\instructions\\backlogit-yaml-header-tooling.instructions.md.tmpl",
+      "mode": "rendered"
+    },
+    {
+      "path": ".github/instructions/backlogit.instructions.md",
+      "template": "C:\\Users\\hannov\\AppData\\Roaming\\uv\\tools\\autoharness\\Lib\\site-packages\\autoharness\\data\\templates\\instructions\\backlogit.instructions.md.tmpl",
+      "mode": "rendered"
+    },
+    {
+      "path": ".github/instructions/browser-verification.instructions.md",
+      "template": "C:\\Users\\hannov\\AppData\\Roaming\\uv\\tools\\autoharness\\Lib\\site-packages\\autoharness\\data\\templates\\instructions\\browser-verification.instructions.md.tmpl",
+      "mode": "rendered"
+    },
+    {
+      "path": ".github/instructions/ci-security.instructions.md",
+      "template": "C:\\Users\\hannov\\AppData\\Roaming\\uv\\tools\\autoharness\\Lib\\site-packages\\autoharness\\data\\templates\\instructions\\ci-security.instructions.md.tmpl",
+      "mode": "rendered"
+    },
+    {
+      "path": ".github/instructions/circuit-breaker.instructions.md",
+      "template": "C:\\Users\\hannov\\AppData\\Roaming\\uv\\tools\\autoharness\\Lib\\site-packages\\autoharness\\data\\templates\\instructions\\circuit-breaker.instructions.md.tmpl",
+      "mode": "rendered"
+    },
+    {
+      "path": ".github/instructions/commit-message.instructions.md",
+      "template": "C:\\Users\\hannov\\AppData\\Roaming\\uv\\tools\\autoharness\\Lib\\site-packages\\autoharness\\data\\templates\\instructions\\commit-message.instructions.md.tmpl",
+      "mode": "rendered"
+    },
+    {
+      "path": ".github/instructions/concurrency.instructions.md",
+      "template": "C:\\Users\\hannov\\AppData\\Roaming\\uv\\tools\\autoharness\\Lib\\site-packages\\autoharness\\data\\templates\\instructions\\concurrency.instructions.md.tmpl",
+      "mode": "rendered"
+    },
+    {
+      "path": ".github/instructions/constitution.instructions.md",
+      "template": "C:\\Users\\hannov\\AppData\\Roaming\\uv\\tools\\autoharness\\Lib\\site-packages\\autoharness\\data\\templates\\foundation\\constitution.instructions.md.tmpl",
+      "mode": "rendered"
+    },
+    {
+      "path": ".github/instructions/continuous-learning.instructions.md",
+      "template": "C:\\Users\\hannov\\AppData\\Roaming\\uv\\tools\\autoharness\\Lib\\site-packages\\autoharness\\data\\templates\\instructions\\continuous-learning.instructions.md.tmpl",
+      "mode": "rendered"
+    },
+    {
+      "path": ".github/instructions/git-merge.instructions.md",
+      "template": "C:\\Users\\hannov\\AppData\\Roaming\\uv\\tools\\autoharness\\Lib\\site-packages\\autoharness\\data\\templates\\instructions\\git-merge.instructions.md.tmpl",
+      "mode": "rendered"
+    },
+    {
+      "path": ".github/instructions/github-pr-automation.instructions.md",
+      "template": "C:\\Users\\hannov\\AppData\\Roaming\\uv\\tools\\autoharness\\Lib\\site-packages\\autoharness\\data\\templates\\instructions\\github-pr-automation.instructions.md.tmpl",
+      "mode": "rendered"
+    },
+    {
+      "path": ".github/instructions/markdown.instructions.md",
+      "template": "C:\\Users\\hannov\\AppData\\Roaming\\uv\\tools\\autoharness\\Lib\\site-packages\\autoharness\\data\\templates\\instructions\\markdown.instructions.md.tmpl",
+      "mode": "rendered"
+    },
+    {
+      "path": ".github/instructions/mcp-server.instructions.md",
+      "template": "C:\\Users\\hannov\\AppData\\Roaming\\uv\\tools\\autoharness\\Lib\\site-packages\\autoharness\\data\\templates\\instructions\\mcp-server.instructions.md.tmpl",
+      "mode": "rendered"
+    },
+    {
+      "path": ".github/instructions/prompt-builder.instructions.md",
+      "template": "C:\\Users\\hannov\\AppData\\Roaming\\uv\\tools\\autoharness\\Lib\\site-packages\\autoharness\\data\\templates\\instructions\\prompt-builder.instructions.md.tmpl",
+      "mode": "rendered"
+    },
+    {
+      "path": ".github/instructions/pull-request.instructions.md",
+      "template": "C:\\Users\\hannov\\AppData\\Roaming\\uv\\tools\\autoharness\\Lib\\site-packages\\autoharness\\data\\templates\\instructions\\pull-request.instructions.md.tmpl",
+      "mode": "rendered"
+    },
+    {
+      "path": ".github/instructions/release-observability.instructions.md",
+      "template": "C:\\Users\\hannov\\AppData\\Roaming\\uv\\tools\\autoharness\\Lib\\site-packages\\autoharness\\data\\templates\\instructions\\release-observability.instructions.md.tmpl",
+      "mode": "rendered"
+    },
+    {
+      "path": ".github/instructions/strict-safety.instructions.md",
+      "template": "C:\\Users\\hannov\\AppData\\Roaming\\uv\\tools\\autoharness\\Lib\\site-packages\\autoharness\\data\\templates\\instructions\\strict-safety.instructions.md.tmpl",
+      "mode": "rendered"
+    },
+    {
+      "path": ".github/instructions/technology-go.instructions.md",
+      "template": "C:\\Users\\hannov\\AppData\\Roaming\\uv\\tools\\autoharness\\Lib\\site-packages\\autoharness\\data\\templates\\instructions\\technology-go.instructions.md.tmpl",
+      "mode": "rendered"
+    },
+    {
+      "path": ".github/instructions/technology-python.instructions.md",
+      "template": "C:\\Users\\hannov\\AppData\\Roaming\\uv\\tools\\autoharness\\Lib\\site-packages\\autoharness\\data\\templates\\instructions\\technology-python.instructions.md.tmpl",
+      "mode": "rendered"
+    },
+    {
+      "path": ".github/instructions/technology-rust.instructions.md",
+      "template": "C:\\Users\\hannov\\AppData\\Roaming\\uv\\tools\\autoharness\\Lib\\site-packages\\autoharness\\data\\templates\\instructions\\technology-rust.instructions.md.tmpl",
+      "mode": "rendered"
+    },
+    {
+      "path": ".github/instructions/technology-typescript.instructions.md",
+      "template": "C:\\Users\\hannov\\AppData\\Roaming\\uv\\tools\\autoharness\\Lib\\site-packages\\autoharness\\data\\templates\\instructions\\technology-typescript.instructions.md.tmpl",
+      "mode": "rendered"
+    },
+    {
+      "path": ".github/instructions/technology.instructions.md",
+      "template": "C:\\Users\\hannov\\AppData\\Roaming\\uv\\tools\\autoharness\\Lib\\site-packages\\autoharness\\data\\templates\\instructions\\technology.instructions.md.tmpl",
+      "mode": "rendered"
+    },
+    {
+      "path": ".github/instructions/workflows.instructions.md",
+      "template": "C:\\Users\\hannov\\AppData\\Roaming\\uv\\tools\\autoharness\\Lib\\site-packages\\autoharness\\data\\templates\\instructions\\workflows.instructions.md.tmpl",
+      "mode": "rendered"
+    },
+    {
+      "path": ".github/instructions/writing-style.instructions.md",
+      "template": "C:\\Users\\hannov\\AppData\\Roaming\\uv\\tools\\autoharness\\Lib\\site-packages\\autoharness\\data\\templates\\instructions\\writing-style.instructions.md.tmpl",
+      "mode": "rendered"
+    },
+    {
+      "path": ".github/policies/workflow-policies.md",
+      "template": "C:\\Users\\hannov\\AppData\\Roaming\\uv\\tools\\autoharness\\Lib\\site-packages\\autoharness\\data\\templates\\policies\\workflow-policies.md.tmpl",
+      "mode": "rendered"
+    },
+    {
+      "path": ".github/prompts/ping-loop.prompt.md",
+      "template": "C:\\Users\\hannov\\AppData\\Roaming\\uv\\tools\\autoharness\\Lib\\site-packages\\autoharness\\data\\templates\\prompts\\ping-loop.prompt.md.tmpl",
+      "mode": "rendered"
+    },
+    {
+      "path": ".github/prompts/stage-grouping-analysis.prompt.md",
+      "template": "C:\\Users\\hannov\\AppData\\Roaming\\uv\\tools\\autoharness\\Lib\\site-packages\\autoharness\\data\\templates\\prompts\\stage-grouping-analysis.prompt.md.tmpl",
+      "mode": "rendered"
+    },
+    {
+      "path": ".github/skills/build-feature/SKILL.md",
+      "template": "C:\\Users\\hannov\\AppData\\Roaming\\uv\\tools\\autoharness\\Lib\\site-packages\\autoharness\\data\\templates\\skills\\build-feature\\SKILL.md.tmpl",
+      "mode": "rendered"
+    },
+    {
+      "path": ".github/skills/compact-context/SKILL.md",
+      "template": "C:\\Users\\hannov\\AppData\\Roaming\\uv\\tools\\autoharness\\Lib\\site-packages\\autoharness\\data\\templates\\skills\\compact-context\\SKILL.md.tmpl",
+      "mode": "rendered"
+    },
+    {
+      "path": ".github/skills/compound-refresh/SKILL.md",
+      "template": "C:\\Users\\hannov\\AppData\\Roaming\\uv\\tools\\autoharness\\Lib\\site-packages\\autoharness\\data\\templates\\skills\\compound-refresh\\SKILL.md.tmpl",
+      "mode": "rendered"
+    },
+    {
+      "path": ".github/skills/compound/SKILL.md",
+      "template": "C:\\Users\\hannov\\AppData\\Roaming\\uv\\tools\\autoharness\\Lib\\site-packages\\autoharness\\data\\templates\\skills\\compound\\SKILL.md.tmpl",
+      "mode": "rendered"
+    },
+    {
+      "path": ".github/skills/deliberate/SKILL.md",
+      "template": "C:\\Users\\hannov\\AppData\\Roaming\\uv\\tools\\autoharness\\Lib\\site-packages\\autoharness\\data\\templates\\skills\\deliberate\\SKILL.md.tmpl",
+      "mode": "rendered"
+    },
+    {
+      "path": ".github/skills/evolve/SKILL.md",
+      "template": "C:\\Users\\hannov\\AppData\\Roaming\\uv\\tools\\autoharness\\Lib\\site-packages\\autoharness\\data\\templates\\skills\\evolve\\SKILL.md.tmpl",
+      "mode": "rendered"
+    },
+    {
+      "path": ".github/skills/file-lock/scripts/acquire_lock.ps1",
+      "template": "C:\\Users\\hannov\\AppData\\Roaming\\uv\\tools\\autoharness\\Lib\\site-packages\\autoharness\\data\\templates\\skills\\file-lock\\scripts\\acquire_lock.ps1",
+      "mode": "rendered"
+    },
+    {
+      "path": ".github/skills/file-lock/scripts/acquire_lock.sh",
+      "template": "C:\\Users\\hannov\\AppData\\Roaming\\uv\\tools\\autoharness\\Lib\\site-packages\\autoharness\\data\\templates\\skills\\file-lock\\scripts\\acquire_lock.sh",
+      "mode": "rendered"
+    },
+    {
+      "path": ".github/skills/file-lock/scripts/release_lock.ps1",
+      "template": "C:\\Users\\hannov\\AppData\\Roaming\\uv\\tools\\autoharness\\Lib\\site-packages\\autoharness\\data\\templates\\skills\\file-lock\\scripts\\release_lock.ps1",
+      "mode": "rendered"
+    },
+    {
+      "path": ".github/skills/file-lock/scripts/release_lock.sh",
+      "template": "C:\\Users\\hannov\\AppData\\Roaming\\uv\\tools\\autoharness\\Lib\\site-packages\\autoharness\\data\\templates\\skills\\file-lock\\scripts\\release_lock.sh",
+      "mode": "rendered"
+    },
+    {
+      "path": ".github/skills/file-lock/SKILL.md",
+      "template": "C:\\Users\\hannov\\AppData\\Roaming\\uv\\tools\\autoharness\\Lib\\site-packages\\autoharness\\data\\templates\\skills\\file-lock\\SKILL.md.tmpl",
+      "mode": "rendered"
+    },
+    {
+      "path": ".github/skills/fix-ci/SKILL.md",
+      "template": "C:\\Users\\hannov\\AppData\\Roaming\\uv\\tools\\autoharness\\Lib\\site-packages\\autoharness\\data\\templates\\skills\\fix-ci\\SKILL.md.tmpl",
+      "mode": "rendered"
+    },
+    {
+      "path": ".github/skills/harness-architect/SKILL.md",
+      "template": "C:\\Users\\hannov\\AppData\\Roaming\\uv\\tools\\autoharness\\Lib\\site-packages\\autoharness\\data\\templates\\skills\\harness-architect\\SKILL.md.tmpl",
+      "mode": "rendered"
+    },
+    {
+      "path": ".github/skills/harvest/SKILL.md",
+      "template": "C:\\Users\\hannov\\AppData\\Roaming\\uv\\tools\\autoharness\\Lib\\site-packages\\autoharness\\data\\templates\\skills\\harvest\\SKILL.md.tmpl",
+      "mode": "rendered"
+    },
+    {
+      "path": ".github/skills/impl-plan/SKILL.md",
+      "template": "C:\\Users\\hannov\\AppData\\Roaming\\uv\\tools\\autoharness\\Lib\\site-packages\\autoharness\\data\\templates\\skills\\impl-plan\\SKILL.md.tmpl",
+      "mode": "rendered"
+    },
+    {
+      "path": ".github/skills/learn/SKILL.md",
+      "template": "C:\\Users\\hannov\\AppData\\Roaming\\uv\\tools\\autoharness\\Lib\\site-packages\\autoharness\\data\\templates\\skills\\learn\\SKILL.md.tmpl",
+      "mode": "rendered"
+    },
+    {
+      "path": ".github/skills/observe/SKILL.md",
+      "template": "C:\\Users\\hannov\\AppData\\Roaming\\uv\\tools\\autoharness\\Lib\\site-packages\\autoharness\\data\\templates\\skills\\observe\\SKILL.md.tmpl",
+      "mode": "rendered"
+    },
+    {
+      "path": ".github/skills/operational-closure/SKILL.md",
+      "template": "C:\\Users\\hannov\\AppData\\Roaming\\uv\\tools\\autoharness\\Lib\\site-packages\\autoharness\\data\\templates\\skills\\operational-closure\\SKILL.md.tmpl",
+      "mode": "rendered"
+    },
+    {
+      "path": ".github/skills/plan-harden/SKILL.md",
+      "template": "C:\\Users\\hannov\\AppData\\Roaming\\uv\\tools\\autoharness\\Lib\\site-packages\\autoharness\\data\\templates\\skills\\plan-harden\\SKILL.md.tmpl",
+      "mode": "rendered"
+    },
+    {
+      "path": ".github/skills/plan-review/SKILL.md",
+      "template": "C:\\Users\\hannov\\AppData\\Roaming\\uv\\tools\\autoharness\\Lib\\site-packages\\autoharness\\data\\templates\\skills\\plan-review\\SKILL.md.tmpl",
+      "mode": "rendered"
+    },
+    {
+      "path": ".github/skills/pr-lifecycle/SKILL.md",
+      "template": "C:\\Users\\hannov\\AppData\\Roaming\\uv\\tools\\autoharness\\Lib\\site-packages\\autoharness\\data\\templates\\skills\\pr-lifecycle\\SKILL.md.tmpl",
+      "mode": "rendered"
+    },
+    {
+      "path": ".github/skills/review/SKILL.md",
+      "template": "C:\\Users\\hannov\\AppData\\Roaming\\uv\\tools\\autoharness\\Lib\\site-packages\\autoharness\\data\\templates\\skills\\review\\SKILL.md.tmpl",
+      "mode": "rendered"
+    },
+    {
+      "path": ".github/skills/runtime-verification/SKILL.md",
+      "template": "C:\\Users\\hannov\\AppData\\Roaming\\uv\\tools\\autoharness\\Lib\\site-packages\\autoharness\\data\\templates\\skills\\runtime-verification\\SKILL.md.tmpl",
+      "mode": "rendered"
+    },
+    {
+      "path": ".github/skills/safety-modes/SKILL.md",
+      "template": "C:\\Users\\hannov\\AppData\\Roaming\\uv\\tools\\autoharness\\Lib\\site-packages\\autoharness\\data\\templates\\skills\\safety-modes\\SKILL.md.tmpl",
+      "mode": "rendered"
+    },
+    {
+      "path": ".github/skills/shipment-reconcile/SKILL.md",
+      "template": "C:\\Users\\hannov\\AppData\\Roaming\\uv\\tools\\autoharness\\Lib\\site-packages\\autoharness\\data\\templates\\skills\\shipment-reconcile\\SKILL.md.tmpl",
+      "mode": "rendered"
+    },
+    {
+      "path": ".github/skills/skill-search/scripts/search.ps1",
+      "template": "C:\\Users\\hannov\\AppData\\Roaming\\uv\\tools\\autoharness\\Lib\\site-packages\\autoharness\\data\\templates\\skills\\skill-search\\scripts\\search.ps1",
+      "mode": "rendered"
+    },
+    {
+      "path": ".github/skills/skill-search/scripts/search.sh",
+      "template": "C:\\Users\\hannov\\AppData\\Roaming\\uv\\tools\\autoharness\\Lib\\site-packages\\autoharness\\data\\templates\\skills\\skill-search\\scripts\\search.sh",
+      "mode": "rendered"
+    },
+    {
+      "path": ".github/skills/skill-search/SKILL.md",
+      "template": "C:\\Users\\hannov\\AppData\\Roaming\\uv\\tools\\autoharness\\Lib\\site-packages\\autoharness\\data\\templates\\skills\\skill-search\\SKILL.md.tmpl",
+      "mode": "rendered"
+    },
+    {
+      "path": ".github/skills/spike/SKILL.md",
+      "template": "C:\\Users\\hannov\\AppData\\Roaming\\uv\\tools\\autoharness\\Lib\\site-packages\\autoharness\\data\\templates\\skills\\spike\\SKILL.md.tmpl",
+      "mode": "rendered"
+    },
+    {
+      "path": "AGENTS.md",
+      "template": "C:\\Users\\hannov\\AppData\\Roaming\\uv\\tools\\autoharness\\Lib\\site-packages\\autoharness\\data\\templates\\foundation\\AGENTS.md.tmpl",
+      "mode": "rendered"
+    },
+    {
+      "path": "scripts/autoharness/.markdownlint.json",
+      "template": "C:\\Users\\hannov\\AppData\\Roaming\\uv\\tools\\autoharness\\Lib\\site-packages\\autoharness\\data\\templates\\scripts\\.markdownlint.json.tmpl",
+      "mode": "rendered"
+    },
+    {
+      "path": "scripts/autoharness/pre-commit-markdownlint.ps1",
+      "template": "C:\\Users\\hannov\\AppData\\Roaming\\uv\\tools\\autoharness\\Lib\\site-packages\\autoharness\\data\\templates\\scripts\\pre-commit-markdownlint.ps1.tmpl",
+      "mode": "rendered"
+    },
+    {
+      "path": "scripts/autoharness/pre-commit-markdownlint.sh",
+      "template": "C:\\Users\\hannov\\AppData\\Roaming\\uv\\tools\\autoharness\\Lib\\site-packages\\autoharness\\data\\templates\\scripts\\pre-commit-markdownlint.sh.tmpl",
+      "mode": "rendered"
+    },
+    {
+      "path": "scripts/autoharness/start.ps1",
+      "template": "C:\\Users\\hannov\\AppData\\Roaming\\uv\\tools\\autoharness\\Lib\\site-packages\\autoharness\\data\\templates\\scripts\\start.ps1.tmpl",
+      "mode": "rendered"
+    },
+    {
+      "path": "scripts/autoharness/start.sh",
+      "template": "C:\\Users\\hannov\\AppData\\Roaming\\uv\\tools\\autoharness\\Lib\\site-packages\\autoharness\\data\\templates\\scripts\\start.sh.tmpl",
+      "mode": "rendered"
+    }
+  ],
+  "skipped": [],
+  "unresolved": [],
+  "checksum_scan": [
+    {
+      "path": ".autoharness/config.yaml",
+      "status": "unchanged",
+      "expected": "98642c0aaa1872c9437cb6e9d46493b9d1536755fe39108ae1ccbbc435124fa3",
+      "actual": "98642c0aaa1872c9437cb6e9d46493b9d1536755fe39108ae1ccbbc435124fa3"
+    },
+    {
+      "path": ".backlog/.stash.md",
+      "status": "unchanged",
+      "expected": "63cbddd114f2cec70786c18145eb7e13c9dda4a77c2da28f3d5d3cf3804443db",
+      "actual": "63cbddd114f2cec70786c18145eb7e13c9dda4a77c2da28f3d5d3cf3804443db"
+    },
+    {
+      "path": ".backlog/config.yml",
+      "status": "unchanged",
+      "expected": "a2a8507e6f560d82226bda06ba593003e2cb09349b6822d0cbde2088ed53fa74",
+      "actual": "a2a8507e6f560d82226bda06ba593003e2cb09349b6822d0cbde2088ed53fa74"
+    },
+    {
+      "path": ".github/agents/adversarial-review.agent.md",
+      "status": "unchanged",
+      "expected": "83f9189ee6751de1c933380d02db940777fda86e590eac5a46963a47d3f9935c",
+      "actual": "83f9189ee6751de1c933380d02db940777fda86e590eac5a46963a47d3f9935c"
+    },
+    {
+      "path": ".github/agents/language-engineer.agent.md",
+      "status": "unchanged",
+      "expected": "d98f03f953ef5d2475db0b0ed5b8527ef675be72248c4770c49e814d2e9a1d39",
+      "actual": "d98f03f953ef5d2475db0b0ed5b8527ef675be72248c4770c49e814d2e9a1d39"
+    },
+    {
+      "path": ".github/agents/prompt-builder.agent.md",
+      "status": "unchanged",
+      "expected": "14fa1931e2e1c18651493efd7643e6c0fc214722506c6e901cf2d0aab1bfabd4",
+      "actual": "14fa1931e2e1c18651493efd7643e6c0fc214722506c6e901cf2d0aab1bfabd4"
+    },
+    {
+      "path": ".github/agents/research/learnings-researcher.agent.md",
+      "status": "unchanged",
+      "expected": "ee8f10b8b0f8487409ccbdf4e931a9d7b7ebbc4ba5f5ed626024cc9d0187cb59",
+      "actual": "ee8f10b8b0f8487409ccbdf4e931a9d7b7ebbc4ba5f5ed626024cc9d0187cb59"
+    },
+    {
+      "path": ".github/agents/review/agent-native-parity-reviewer.agent.md",
+      "status": "unchanged",
+      "expected": "3e341e90632aefc08889c377c6494dc3ced9b59030dcb16827c625cd867cd460",
+      "actual": "3e341e90632aefc08889c377c6494dc3ced9b59030dcb16827c625cd867cd460"
+    },
+    {
+      "path": ".github/agents/review/architecture-strategist.agent.md",
+      "status": "unchanged",
+      "expected": "f8809cd479f43c26cb11e98458ef315a96cdeaf6aa1e2fa76c75172d7c262bb0",
+      "actual": "f8809cd479f43c26cb11e98458ef315a96cdeaf6aa1e2fa76c75172d7c262bb0"
+    },
+    {
+      "path": ".github/agents/review/concurrency-reviewer.agent.md",
+      "status": "unchanged",
+      "expected": "56aa8fff649cfcbe23facf20430ae11a9b5f240f974519577590f671c83f7389",
+      "actual": "56aa8fff649cfcbe23facf20430ae11a9b5f240f974519577590f671c83f7389"
+    },
+    {
+      "path": ".github/agents/review/constitution-reviewer.agent.md",
+      "status": "unchanged",
+      "expected": "84806d3ce69a8aa9fe77956b9d28e276d8b67f29f7523ea7db1f629d63a02a81",
+      "actual": "84806d3ce69a8aa9fe77956b9d28e276d8b67f29f7523ea7db1f629d63a02a81"
+    },
+    {
+      "path": ".github/agents/review/scope-boundary-auditor.agent.md",
+      "status": "unchanged",
+      "expected": "760ba065817ceb28985a75e7ef3c668dca4994321132e5565004197b3e006e53",
+      "actual": "760ba065817ceb28985a75e7ef3c668dca4994321132e5565004197b3e006e53"
+    },
+    {
+      "path": ".github/agents/review/technology-reviewer.agent.md",
+      "status": "unchanged",
+      "expected": "daf70ea7a97ff4a5bc2e97c8982dd3ed6d92fc4d2f52f06e12349b39406588b9",
+      "actual": "daf70ea7a97ff4a5bc2e97c8982dd3ed6d92fc4d2f52f06e12349b39406588b9"
+    },
+    {
+      "path": ".github/agents/ship.agent.md",
+      "status": "unchanged",
+      "expected": "7168086fe7a37636dd10ea8a6cc0864b7c6ddaad3ae5858c06a1e2b782753c57",
+      "actual": "7168086fe7a37636dd10ea8a6cc0864b7c6ddaad3ae5858c06a1e2b782753c57"
+    },
+    {
+      "path": ".github/agents/stage.agent.md",
+      "status": "unchanged",
+      "expected": "21f255a4b4b7640c143decc6eeb5d6a6a0186ab7e12fe1de8ce43c0bbd718e4d",
+      "actual": "21f255a4b4b7640c143decc6eeb5d6a6a0186ab7e12fe1de8ce43c0bbd718e4d"
+    },
+    {
+      "path": ".github/copilot-instructions.md",
+      "status": "unchanged",
+      "expected": "301c4759c4602718ccf30751fb3588cfbe33b962c758b95301a6f2a47759f31e",
+      "actual": "301c4759c4602718ccf30751fb3588cfbe33b962c758b95301a6f2a47759f31e"
+    },
+    {
+      "path": ".github/instructions/adversarial-review.instructions.md",
+      "status": "unchanged",
+      "expected": "2b33ec2e1c880e4884ee95e949b309eaceee197953c6070b19c05c19939d1b4d",
+      "actual": "2b33ec2e1c880e4884ee95e949b309eaceee197953c6070b19c05c19939d1b4d"
+    },
+    {
+      "path": ".github/instructions/agent-engram.instructions.md",
+      "status": "unchanged",
+      "expected": "43513055942ab16652d3903145ca0b1c2a90058344c96007d82a2bd81238ad2e",
+      "actual": "43513055942ab16652d3903145ca0b1c2a90058344c96007d82a2bd81238ad2e"
+    },
+    {
+      "path": ".github/instructions/agent-intercom.instructions.md",
+      "status": "unchanged",
+      "expected": "a33c157853d1662ebb22b15a90ebcab2683b63cb44b832d3e74f46fed36af185",
+      "actual": "a33c157853d1662ebb22b15a90ebcab2683b63cb44b832d3e74f46fed36af185"
+    },
+    {
+      "path": ".github/instructions/architecture-doc.instructions.md",
+      "status": "unchanged",
+      "expected": "87e23e3e7aaceda53ad6888e24441caca878f40ef05983465578d582bb6099a1",
+      "actual": "87e23e3e7aaceda53ad6888e24441caca878f40ef05983465578d582bb6099a1"
+    },
+    {
+      "path": ".github/instructions/backlog-integration.instructions.md",
+      "status": "unchanged",
+      "expected": "03224323db71a46313d3269a6d52ff324f58a64e4fc356ead406031871455462",
+      "actual": "03224323db71a46313d3269a6d52ff324f58a64e4fc356ead406031871455462"
+    },
+    {
+      "path": ".github/instructions/backlogit-sql-schema.instructions.md",
+      "status": "unchanged",
+      "expected": "0226039c685260f10763d489eb41b3db504e6c16828029fef15b79e2d912ee91",
+      "actual": "0226039c685260f10763d489eb41b3db504e6c16828029fef15b79e2d912ee91"
+    },
+    {
+      "path": ".github/instructions/backlogit-yaml-header-tooling.instructions.md",
+      "status": "unchanged",
+      "expected": "c289ac2928c32a73b75c96ce191070128419de7f56e33ba4ca63c047569399ed",
+      "actual": "c289ac2928c32a73b75c96ce191070128419de7f56e33ba4ca63c047569399ed"
+    },
+    {
+      "path": ".github/instructions/backlogit.instructions.md",
+      "status": "unchanged",
+      "expected": "d3ecc7484044ad44675899eb9ca38ee529055ca3fe81949964496deeafd93ab6",
+      "actual": "d3ecc7484044ad44675899eb9ca38ee529055ca3fe81949964496deeafd93ab6"
+    },
+    {
+      "path": ".github/instructions/browser-verification.instructions.md",
+      "status": "unchanged",
+      "expected": "ee931057e6244d857776640a5096800fecda1ea9db41bc4387fc9be7c8f04bce",
+      "actual": "ee931057e6244d857776640a5096800fecda1ea9db41bc4387fc9be7c8f04bce"
+    },
+    {
+      "path": ".github/instructions/ci-security.instructions.md",
+      "status": "unchanged",
+      "expected": "6347440187fbef7d6ecc87a24eaebd53ddbe02ebe06954aaf1641b9f78439d34",
+      "actual": "6347440187fbef7d6ecc87a24eaebd53ddbe02ebe06954aaf1641b9f78439d34"
+    },
+    {
+      "path": ".github/instructions/circuit-breaker.instructions.md",
+      "status": "unchanged",
+      "expected": "44ef758f0a5dc741137c8e0992eb92b186cb32ea528a1b29890bac8277375971",
+      "actual": "44ef758f0a5dc741137c8e0992eb92b186cb32ea528a1b29890bac8277375971"
+    },
+    {
+      "path": ".github/instructions/commit-message.instructions.md",
+      "status": "unchanged",
+      "expected": "1b0e9bbaf9c79d7d087e02c9f0203c8bd83821222befa5798f195f457c4e6f33",
+      "actual": "1b0e9bbaf9c79d7d087e02c9f0203c8bd83821222befa5798f195f457c4e6f33"
+    },
+    {
+      "path": ".github/instructions/concurrency.instructions.md",
+      "status": "unchanged",
+      "expected": "19f276c38f38740d9619832eeb019088cf7ff0b16148cb6f126685d54426eef3",
+      "actual": "19f276c38f38740d9619832eeb019088cf7ff0b16148cb6f126685d54426eef3"
+    },
+    {
+      "path": ".github/instructions/constitution.instructions.md",
+      "status": "unchanged",
+      "expected": "485ea8ee498d8bd1832f8941b1a1bfe53ce8a5cbcba235b57f3a30af55a3d55c",
+      "actual": "485ea8ee498d8bd1832f8941b1a1bfe53ce8a5cbcba235b57f3a30af55a3d55c"
+    },
+    {
+      "path": ".github/instructions/continuous-learning.instructions.md",
+      "status": "unchanged",
+      "expected": "599a5386a3e50c1580e3b9a27c26a73535868918d26a0943717f10c302c98674",
+      "actual": "599a5386a3e50c1580e3b9a27c26a73535868918d26a0943717f10c302c98674"
+    },
+    {
+      "path": ".github/instructions/git-merge.instructions.md",
+      "status": "unchanged",
+      "expected": "0b6f2073fdb53119642279b6b4545d9f546d27a0b559527200a04539bdccfcb6",
+      "actual": "0b6f2073fdb53119642279b6b4545d9f546d27a0b559527200a04539bdccfcb6"
+    },
+    {
+      "path": ".github/instructions/github-pr-automation.instructions.md",
+      "status": "unchanged",
+      "expected": "2880bf82fba1531b2a90ae3560e81395e4cb00d154451f3b277898f4a25d08e9",
+      "actual": "2880bf82fba1531b2a90ae3560e81395e4cb00d154451f3b277898f4a25d08e9"
+    },
+    {
+      "path": ".github/instructions/markdown.instructions.md",
+      "status": "unchanged",
+      "expected": "cd023becf47a71dbe6cd6b95ea9ae6bf3e2aa12930f70925cc58a02f440ba010",
+      "actual": "cd023becf47a71dbe6cd6b95ea9ae6bf3e2aa12930f70925cc58a02f440ba010"
+    },
+    {
+      "path": ".github/instructions/mcp-server.instructions.md",
+      "status": "unchanged",
+      "expected": "8c677d6cb4697a07519a41e5e07afce2d947aafd813b39ffb9d5a67e6c78eb68",
+      "actual": "8c677d6cb4697a07519a41e5e07afce2d947aafd813b39ffb9d5a67e6c78eb68"
+    },
+    {
+      "path": ".github/instructions/prompt-builder.instructions.md",
+      "status": "unchanged",
+      "expected": "cfecf2d1e630f32bbeeca6feb99dcbdf6cb66415f4a2d17cadc17cb4ff3cf90b",
+      "actual": "cfecf2d1e630f32bbeeca6feb99dcbdf6cb66415f4a2d17cadc17cb4ff3cf90b"
+    },
+    {
+      "path": ".github/instructions/pull-request.instructions.md",
+      "status": "unchanged",
+      "expected": "d25b059e458210a3b8839227091cce1b72fb8383a58b919e4b6f9ed70a6fac1a",
+      "actual": "d25b059e458210a3b8839227091cce1b72fb8383a58b919e4b6f9ed70a6fac1a"
+    },
+    {
+      "path": ".github/instructions/release-observability.instructions.md",
+      "status": "unchanged",
+      "expected": "2d32a7ff1a34b7225eb880254ac7f8702ee3468b942b9329b15fd338dad1c8c4",
+      "actual": "2d32a7ff1a34b7225eb880254ac7f8702ee3468b942b9329b15fd338dad1c8c4"
+    },
+    {
+      "path": ".github/instructions/strict-safety.instructions.md",
+      "status": "unchanged",
+      "expected": "80aa1272fb4fda1bc05a3b8f241f123c4c3769f9358bacb620e1e3b3e01d87de",
+      "actual": "80aa1272fb4fda1bc05a3b8f241f123c4c3769f9358bacb620e1e3b3e01d87de"
+    },
+    {
+      "path": ".github/instructions/technology-go.instructions.md",
+      "status": "unchanged",
+      "expected": "44e1a7188c9ff6a602da66b3a31b9e5fc12db734e33cb5cd8fc92d5d4f631b77",
+      "actual": "44e1a7188c9ff6a602da66b3a31b9e5fc12db734e33cb5cd8fc92d5d4f631b77"
+    },
+    {
+      "path": ".github/instructions/technology-python.instructions.md",
+      "status": "unchanged",
+      "expected": "d405e5be17c5134a832c214f1de9b79c778fc699ed799e75deed1049fbd8e8ed",
+      "actual": "d405e5be17c5134a832c214f1de9b79c778fc699ed799e75deed1049fbd8e8ed"
+    },
+    {
+      "path": ".github/instructions/technology-rust.instructions.md",
+      "status": "unchanged",
+      "expected": "d34e653127677752f886be9c06dc59a96a3d48b53ecce0766e02464bc9568457",
+      "actual": "d34e653127677752f886be9c06dc59a96a3d48b53ecce0766e02464bc9568457"
+    },
+    {
+      "path": ".github/instructions/technology-typescript.instructions.md",
+      "status": "unchanged",
+      "expected": "866d20362a9d2628b3d84a8603191b4d3cbb917fb42e3857bd8c4e62aa1cff8e",
+      "actual": "866d20362a9d2628b3d84a8603191b4d3cbb917fb42e3857bd8c4e62aa1cff8e"
+    },
+    {
+      "path": ".github/instructions/technology.instructions.md",
+      "status": "unchanged",
+      "expected": "90ad64bae029aea5a107ea2ae5c48bcc973181e77cb1a61239dfc1b9265d7f8d",
+      "actual": "90ad64bae029aea5a107ea2ae5c48bcc973181e77cb1a61239dfc1b9265d7f8d"
+    },
+    {
+      "path": ".github/instructions/workflows.instructions.md",
+      "status": "unchanged",
+      "expected": "a2e04a060981bc48fb1036190dcd1e5c089ea503db34a5694b9db2229b9f54d8",
+      "actual": "a2e04a060981bc48fb1036190dcd1e5c089ea503db34a5694b9db2229b9f54d8"
+    },
+    {
+      "path": ".github/instructions/writing-style.instructions.md",
+      "status": "unchanged",
+      "expected": "3d6c9fe8061111241a4882a255756f6a44d98d67ae6074c663420fed3868861b",
+      "actual": "3d6c9fe8061111241a4882a255756f6a44d98d67ae6074c663420fed3868861b"
+    },
+    {
+      "path": ".github/policies/workflow-policies.md",
+      "status": "unchanged",
+      "expected": "ea4019ebc6d8e4b223c30a44ee777d860cfa8c1f7218088a41bbebbf45f37d48",
+      "actual": "ea4019ebc6d8e4b223c30a44ee777d860cfa8c1f7218088a41bbebbf45f37d48"
+    },
+    {
+      "path": ".github/prompts/ping-loop.prompt.md",
+      "status": "unchanged",
+      "expected": "57cda857d7a0087779f01b386e1e28aac2ed9def2e85e8fdf0a237116644b49a",
+      "actual": "57cda857d7a0087779f01b386e1e28aac2ed9def2e85e8fdf0a237116644b49a"
+    },
+    {
+      "path": ".github/prompts/stage-grouping-analysis.prompt.md",
+      "status": "unchanged",
+      "expected": "91b8444059f6a95b16a90eaa2141c018683e988b9705c0e5e0065fbcc04515ea",
+      "actual": "91b8444059f6a95b16a90eaa2141c018683e988b9705c0e5e0065fbcc04515ea"
+    },
+    {
+      "path": ".github/skills/build-feature/SKILL.md",
+      "status": "unchanged",
+      "expected": "0199230b2ca9d3afd51bfea1afeb7dd55f7d3288d8a1db60cf7dea7300b89d88",
+      "actual": "0199230b2ca9d3afd51bfea1afeb7dd55f7d3288d8a1db60cf7dea7300b89d88"
+    },
+    {
+      "path": ".github/skills/compact-context/SKILL.md",
+      "status": "unchanged",
+      "expected": "39ba52aa7e669e68402ebcbc6b063a814dc6f4b533e13d6d33e4a38840be1b66",
+      "actual": "39ba52aa7e669e68402ebcbc6b063a814dc6f4b533e13d6d33e4a38840be1b66"
+    },
+    {
+      "path": ".github/skills/compound-refresh/SKILL.md",
+      "status": "unchanged",
+      "expected": "2f7efdbc11aed721d2e90af31a15ebf59d5de3435de037424f0735cce09e3ccc",
+      "actual": "2f7efdbc11aed721d2e90af31a15ebf59d5de3435de037424f0735cce09e3ccc"
+    },
+    {
+      "path": ".github/skills/compound/SKILL.md",
+      "status": "unchanged",
+      "expected": "1b8fca51a50eed9c7c323c67377eb57b050c0c8e2df8034da34801412c21d76f",
+      "actual": "1b8fca51a50eed9c7c323c67377eb57b050c0c8e2df8034da34801412c21d76f"
+    },
+    {
+      "path": ".github/skills/deliberate/SKILL.md",
+      "status": "unchanged",
+      "expected": "4cb4d91b4ad9657fe7dba24179eb10259064ce1e8eae099dfc23bf58fe85ca08",
+      "actual": "4cb4d91b4ad9657fe7dba24179eb10259064ce1e8eae099dfc23bf58fe85ca08"
+    },
+    {
+      "path": ".github/skills/evolve/SKILL.md",
+      "status": "unchanged",
+      "expected": "b4c800a132bdcc8c9f2a815f4f47034caf2fa1da278dd2e0b1f4d660bd48c9ef",
+      "actual": "b4c800a132bdcc8c9f2a815f4f47034caf2fa1da278dd2e0b1f4d660bd48c9ef"
+    },
+    {
+      "path": ".github/skills/file-lock/scripts/acquire_lock.ps1",
+      "status": "unchanged",
+      "expected": "d61a4760c49302d2c8c425d23552ded5e9fd51bf13c76362f1cf41ea3e3115f6",
+      "actual": "d61a4760c49302d2c8c425d23552ded5e9fd51bf13c76362f1cf41ea3e3115f6"
+    },
+    {
+      "path": ".github/skills/file-lock/scripts/acquire_lock.sh",
+      "status": "unchanged",
+      "expected": "9af1a00f0f37bf79753a83147feaef1039de7e8fcb84307e4514f8df316d92a3",
+      "actual": "9af1a00f0f37bf79753a83147feaef1039de7e8fcb84307e4514f8df316d92a3"
+    },
+    {
+      "path": ".github/skills/file-lock/scripts/release_lock.ps1",
+      "status": "unchanged",
+      "expected": "ec6ae8faddbe2dd11bf539b582154d77dc5b592406e3962522e1b216e283399d",
+      "actual": "ec6ae8faddbe2dd11bf539b582154d77dc5b592406e3962522e1b216e283399d"
+    },
+    {
+      "path": ".github/skills/file-lock/scripts/release_lock.sh",
+      "status": "unchanged",
+      "expected": "b0bc75188e6efbf3e47ec1e8af40d7b1f4fe3d14d779bfae62d2d2c44a16509f",
+      "actual": "b0bc75188e6efbf3e47ec1e8af40d7b1f4fe3d14d779bfae62d2d2c44a16509f"
+    },
+    {
+      "path": ".github/skills/file-lock/SKILL.md",
+      "status": "unchanged",
+      "expected": "8451060da342189b28b9d5695b032b47a58dd6dcd693d89eb1378c96788af0b1",
+      "actual": "8451060da342189b28b9d5695b032b47a58dd6dcd693d89eb1378c96788af0b1"
+    },
+    {
+      "path": ".github/skills/fix-ci/SKILL.md",
+      "status": "unchanged",
+      "expected": "c7c26536536de4d8dec9dcf04a00d1bebedfa47f3a97a5301fe3b7e846f2ba6d",
+      "actual": "c7c26536536de4d8dec9dcf04a00d1bebedfa47f3a97a5301fe3b7e846f2ba6d"
+    },
+    {
+      "path": ".github/skills/harness-architect/SKILL.md",
+      "status": "unchanged",
+      "expected": "1600458786f8860bcfb497f04e34d258ae7554f642d72adc86ea1029d52d0bc7",
+      "actual": "1600458786f8860bcfb497f04e34d258ae7554f642d72adc86ea1029d52d0bc7"
+    },
+    {
+      "path": ".github/skills/harvest/SKILL.md",
+      "status": "unchanged",
+      "expected": "6ffe6ff5d7205fdbb865fe63be0727abe8f8706ecd17f067c1468677358b0d1d",
+      "actual": "6ffe6ff5d7205fdbb865fe63be0727abe8f8706ecd17f067c1468677358b0d1d"
+    },
+    {
+      "path": ".github/skills/impl-plan/SKILL.md",
+      "status": "unchanged",
+      "expected": "291851fbba472fccf8c2ea1b8b2b9ec6eb044f386a7a33d936b5ea54217e9a44",
+      "actual": "291851fbba472fccf8c2ea1b8b2b9ec6eb044f386a7a33d936b5ea54217e9a44"
+    },
+    {
+      "path": ".github/skills/learn/SKILL.md",
+      "status": "unchanged",
+      "expected": "c9702133c0f03c4801b6a946eb1b6e6dc844d60573671d7e8901cda72877f598",
+      "actual": "c9702133c0f03c4801b6a946eb1b6e6dc844d60573671d7e8901cda72877f598"
+    },
+    {
+      "path": ".github/skills/observe/SKILL.md",
+      "status": "unchanged",
+      "expected": "2b90bf6b9253c16aba51758db256850b8223501d67e460606779571d3fc17c36",
+      "actual": "2b90bf6b9253c16aba51758db256850b8223501d67e460606779571d3fc17c36"
+    },
+    {
+      "path": ".github/skills/operational-closure/SKILL.md",
+      "status": "unchanged",
+      "expected": "31cbb5e36b02210e1f1cdd6106e04f18f798d48a36507dc532749d716d92a1ba",
+      "actual": "31cbb5e36b02210e1f1cdd6106e04f18f798d48a36507dc532749d716d92a1ba"
+    },
+    {
+      "path": ".github/skills/plan-harden/SKILL.md",
+      "status": "unchanged",
+      "expected": "e00933011d468246f617c4694b55c22407beb46550bc3cb4b39d4b594b96073b",
+      "actual": "e00933011d468246f617c4694b55c22407beb46550bc3cb4b39d4b594b96073b"
+    },
+    {
+      "path": ".github/skills/plan-review/SKILL.md",
+      "status": "unchanged",
+      "expected": "5ea6d4d9066d93a79de7979988674744e190feb6e61962f17efc2e103a15aadb",
+      "actual": "5ea6d4d9066d93a79de7979988674744e190feb6e61962f17efc2e103a15aadb"
+    },
+    {
+      "path": ".github/skills/pr-lifecycle/SKILL.md",
+      "status": "unchanged",
+      "expected": "6fef225c712daca5d72b1e7ed2d33638d3a28d61b30964d8ebd4e494ce7d5848",
+      "actual": "6fef225c712daca5d72b1e7ed2d33638d3a28d61b30964d8ebd4e494ce7d5848"
+    },
+    {
+      "path": ".github/skills/review/SKILL.md",
+      "status": "unchanged",
+      "expected": "ed1e0e51c58cc192b03d77d46fbb4f8cb62ea451cfd262e4bc46db8f45ebb40e",
+      "actual": "ed1e0e51c58cc192b03d77d46fbb4f8cb62ea451cfd262e4bc46db8f45ebb40e"
+    },
+    {
+      "path": ".github/skills/runtime-verification/SKILL.md",
+      "status": "unchanged",
+      "expected": "9c60d5bba829da6a427ab7b55188c18bb9e7f985a7d09b426d7ffad1a6fcc4ad",
+      "actual": "9c60d5bba829da6a427ab7b55188c18bb9e7f985a7d09b426d7ffad1a6fcc4ad"
+    },
+    {
+      "path": ".github/skills/safety-modes/SKILL.md",
+      "status": "unchanged",
+      "expected": "c0bfe3a228ac7826dacc363e5b5c6283d1f275edc310d2629d9705129bea0e47",
+      "actual": "c0bfe3a228ac7826dacc363e5b5c6283d1f275edc310d2629d9705129bea0e47"
+    },
+    {
+      "path": ".github/skills/shipment-reconcile/SKILL.md",
+      "status": "unchanged",
+      "expected": "e409bacfa40d31e99d0b5f8de6f8235af5dca0c240ac9fcd3a6fb7721f544563",
+      "actual": "e409bacfa40d31e99d0b5f8de6f8235af5dca0c240ac9fcd3a6fb7721f544563"
+    },
+    {
+      "path": ".github/skills/skill-search/scripts/search.ps1",
+      "status": "unchanged",
+      "expected": "6b73b3ef9ca8fc7cba1429b0c8c3674aeb9b53d61f7d6223117436947688ac35",
+      "actual": "6b73b3ef9ca8fc7cba1429b0c8c3674aeb9b53d61f7d6223117436947688ac35"
+    },
+    {
+      "path": ".github/skills/skill-search/scripts/search.sh",
+      "status": "unchanged",
+      "expected": "de5333ad8ee730645c00b9e806ea7f339e565218446dc09d45379a26c6075f62",
+      "actual": "de5333ad8ee730645c00b9e806ea7f339e565218446dc09d45379a26c6075f62"
+    },
+    {
+      "path": ".github/skills/skill-search/SKILL.md",
+      "status": "unchanged",
+      "expected": "dd007b292db4200d723d3b8b4602f26e54604cfd4d8a5238abfba5d59149ad10",
+      "actual": "dd007b292db4200d723d3b8b4602f26e54604cfd4d8a5238abfba5d59149ad10"
+    },
+    {
+      "path": ".github/skills/spike/SKILL.md",
+      "status": "unchanged",
+      "expected": "e5f21a3dee3f543d5728cb1f24c1640812f36bd5b74219d5568d83892720d383",
+      "actual": "e5f21a3dee3f543d5728cb1f24c1640812f36bd5b74219d5568d83892720d383"
+    },
+    {
+      "path": "AGENTS.md",
+      "status": "unchanged",
+      "expected": "a6e8549ade9257af0cc9df3b702ae26f29a4962d6c01f8edf8b2a115b0c785ff",
+      "actual": "a6e8549ade9257af0cc9df3b702ae26f29a4962d6c01f8edf8b2a115b0c785ff"
+    },
+    {
+      "path": "scripts/autoharness/.markdownlint.json",
+      "status": "unchanged",
+      "expected": "a822c270d848ea3b28d825dbee624f949a4af02417815f6174737ef8ee1f3daa",
+      "actual": "a822c270d848ea3b28d825dbee624f949a4af02417815f6174737ef8ee1f3daa"
+    },
+    {
+      "path": "scripts/autoharness/pre-commit-markdownlint.ps1",
+      "status": "unchanged",
+      "expected": "87fd08eaf43873c5dcbd77497498b1429b7511e631a828105277a2d2705cd969",
+      "actual": "87fd08eaf43873c5dcbd77497498b1429b7511e631a828105277a2d2705cd969"
+    },
+    {
+      "path": "scripts/autoharness/pre-commit-markdownlint.sh",
+      "status": "unchanged",
+      "expected": "b30a446682b2aff9fe8310221d5fb868d439fb118fbaa29372da00f52a431508",
+      "actual": "b30a446682b2aff9fe8310221d5fb868d439fb118fbaa29372da00f52a431508"
+    },
+    {
+      "path": "scripts/autoharness/start.ps1",
+      "status": "unchanged",
+      "expected": "89362a256d63c148c9276f55781f50f2efcb15ef24243ae4a4ccc11c6ac55490",
+      "actual": "89362a256d63c148c9276f55781f50f2efcb15ef24243ae4a4ccc11c6ac55490"
+    },
+    {
+      "path": "scripts/autoharness/start.sh",
+      "status": "unchanged",
+      "expected": "464a9c820205240d0e878f745c1a9f9ecceb80ad1f0a91c1b4101cfdc74b4a8d",
+      "actual": "464a9c820205240d0e878f745c1a9f9ecceb80ad1f0a91c1b4101cfdc74b4a8d"
+    }
+  ],
+  "schema_contracts": {
+    "manifest": {
+      "kind": "manifest",
+      "contract_name": "harness-manifest",
+      "path": "C:\\Users\\hannov\\OneDrive - Microsoft\\Dev\\AzureNamingTool\\.autoharness\\harness-manifest.yaml",
+      "schema_file": "harness-manifest.schema.json",
+      "compatibility_model": "versioned-contract",
+      "current_version": "1.0.0",
+      "known_versions": [
+        "0.9.0",
+        "1.0.0"
+      ],
+      "observed_version": "1.0.0",
+      "status": "current"
+    },
+    "config": {
+      "kind": "config",
+      "contract_name": "harness-config",
+      "path": "C:\\Users\\hannov\\OneDrive - Microsoft\\Dev\\AzureNamingTool\\.autoharness\\config.yaml",
+      "schema_file": "harness-config.schema.json",
+      "compatibility_model": "versioned-contract",
+      "current_version": "1.0.0",
+      "known_versions": [
+        "0.9.0",
+        "1.0.0"
+      ],
+      "observed_version": "1.0.0",
+      "status": "current"
+    },
+    "profile": {
+      "kind": "profile",
+      "contract_name": "workspace-profile",
+      "path": "C:\\Users\\hannov\\OneDrive - Microsoft\\Dev\\AzureNamingTool\\.autoharness\\workspace-profile.yaml",
+      "schema_file": "workspace-profile.schema.json",
+      "compatibility_model": "versioned-contract",
+      "current_version": "1.0.0",
+      "known_versions": [
+        "0.9.0",
+        "1.0.0"
+      ],
+      "observed_version": "1.0.0",
+      "status": "current"
+    }
+  },
+  "migration_proposals": [],
+  "targeted_checks": {
+    "continuous_learning_instruction": {
+      "path": "C:\\Users\\hannov\\OneDrive - Microsoft\\Dev\\AzureNamingTool\\.github\\instructions\\continuous-learning.instructions.md",
+      "ok": true,
+      "missing": [],
+      "order_violations": []
+    },
+    "strict_safety_instruction": {
+      "path": "C:\\Users\\hannov\\OneDrive - Microsoft\\Dev\\AzureNamingTool\\.github\\instructions\\strict-safety.instructions.md",
+      "ok": true,
+      "missing": [],
+      "order_violations": []
+    },
+    "release_observability_instruction": {
+      "path": "C:\\Users\\hannov\\OneDrive - Microsoft\\Dev\\AzureNamingTool\\.github\\instructions\\release-observability.instructions.md",
+      "ok": true,
+      "missing": [],
+      "order_violations": []
+    },
+    "adversarial_review_instruction": {
+      "path": "C:\\Users\\hannov\\OneDrive - Microsoft\\Dev\\AzureNamingTool\\.github\\instructions\\adversarial-review.instructions.md",
+      "ok": true,
+      "missing": [],
+      "order_violations": []
+    },
+    "copilot_durable_knowledge_layout": {
+      "path": "C:\\Users\\hannov\\OneDrive - Microsoft\\Dev\\AzureNamingTool\\.github\\copilot-instructions.md",
+      "ok": true,
+      "missing": [],
+      "order_violations": []
+    },
+    "copilot_session_memory_guidance": {
+      "path": "C:\\Users\\hannov\\OneDrive - Microsoft\\Dev\\AzureNamingTool\\.github\\copilot-instructions.md",
+      "ok": true,
+      "missing": [],
+      "order_violations": []
+    },
+    "copilot_remote_operator_guidance": {
+      "path": "C:\\Users\\hannov\\OneDrive - Microsoft\\Dev\\AzureNamingTool\\.github\\copilot-instructions.md",
+      "ok": true,
+      "missing": [],
+      "order_violations": []
+    },
+    "copilot_backlog_workflow_expectations": {
+      "path": "C:\\Users\\hannov\\OneDrive - Microsoft\\Dev\\AzureNamingTool\\.github\\copilot-instructions.md",
+      "ok": true,
+      "missing": [],
+      "order_violations": []
+    },
+    "stage_shipment_determinism": {
+      "path": "C:\\Users\\hannov\\OneDrive - Microsoft\\Dev\\AzureNamingTool\\.github\\agents\\stage.agent.md",
+      "ok": true,
+      "missing": [],
+      "order_violations": []
+    },
+    "ship_branch_management": {
+      "path": "C:\\Users\\hannov\\OneDrive - Microsoft\\Dev\\AzureNamingTool\\.github\\agents\\ship.agent.md",
+      "ok": true,
+      "missing": [],
+      "order_violations": []
+    },
+    "pr_lifecycle_branch_retention": {
+      "path": "C:\\Users\\hannov\\OneDrive - Microsoft\\Dev\\AzureNamingTool\\.github\\skills\\pr-lifecycle\\SKILL.md",
+      "ok": true,
+      "missing": [],
+      "order_violations": []
+    }
+  },
+  "learning_signals": {
+    "compound_patterns": [],
+    "promotion_candidates": [],
+    "observation_patterns": [],
+    "closure_patterns": []
+  },
+  "report_paths": {
+    "json": "C:\\Users\\hannov\\OneDrive - Microsoft\\Dev\\AzureNamingTool\\.autoharness\\staging\\verify-workspace-report.json",
+    "markdown": "C:\\Users\\hannov\\OneDrive - Microsoft\\Dev\\AzureNamingTool\\.autoharness\\staging\\verify-workspace-report.md"
+  }
+}
